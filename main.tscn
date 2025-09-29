@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://dociokbx2la3q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
+size = Vector3(32, 1, 32)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+size = Vector3(32, 1, 32)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+albedo_color = Color(0.13621941, 0.2622734, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
+size = Vector3(5, 2, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7dm0k"]
+size = Vector3(5, 2, 3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7dm0k"]
+height = 0.2
+
+[node name="Node3D" type="Node3D"]
+
+[node name="suelo" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="suelo"]
+shape = SubResource("BoxShape3D_7dm0k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="suelo"]
+mesh = SubResource("BoxMesh_ig7tw")
+surface_material_override/0 = SubResource("StandardMaterial3D_0xm2m")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.65159535, 0, 0.75856674, 0, 1, 0, -0.75856674, 0, -0.65159535, 6.834623, 3.9795532, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.531584, 0.82454175, -0.19377777, -0.66345096, 0.54756373, 0.50990903, 0.5265468, -0.14249729, 0.83811885, 0, 0, 0)
+
+[node name="VehicleBody3D" type="VehicleBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.094326, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleBody3D"]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D"]
+mesh = SubResource("BoxMesh_7dm0k")
+skeleton = NodePath("")
+
+[node name="llantaTI" type="VehicleWheel3D" parent="VehicleBody3D"]
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 1.0340345, -1.25, 1.494772)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/llantaTI"]
+transform = Transform3D(-4.3711374e-08, 0.9999997, 3.5527137e-15, -1, -4.3711385e-08, 0, 0, -3.5527137e-15, 0.9999997, 0, 0, 0)
+mesh = SubResource("CylinderMesh_7dm0k")
+
+[node name="llantaDI" type="VehicleWheel3D" parent="VehicleBody3D"]
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, -1.5975187, -1.25, 1.494772)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/llantaDI"]
+transform = Transform3D(-4.3711374e-08, 0.9999997, 3.5527137e-15, -1, -4.3711385e-08, 0, 0, -3.5527137e-15, 0.9999997, 0, 0, 0)
+mesh = SubResource("CylinderMesh_7dm0k")
+
+[node name="llantaDD" type="VehicleWheel3D" parent="VehicleBody3D"]
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, -1.5975187, -1.25, -1.4469604)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/llantaDD"]
+transform = Transform3D(-4.3711374e-08, 0.9999997, 3.5527137e-15, -1, -4.3711385e-08, 0, 0, -3.5527137e-15, 0.9999997, 0, 0, 0)
+mesh = SubResource("CylinderMesh_7dm0k")
+
+[node name="llantaTD" type="VehicleWheel3D" parent="VehicleBody3D"]
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 1.034, -1.25, -1.5076685)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/llantaTD"]
+transform = Transform3D(-4.3711374e-08, 0.9999997, 3.5527137e-15, -1, -4.3711385e-08, 0, 0, -3.5527137e-15, 0.9999997, 0, 0, 0)
+mesh = SubResource("CylinderMesh_7dm0k")
