@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dociokbx2la3q"]
+[gd_scene load_steps=8 format=3 uid="uid://dociokbx2la3q"]
+
+[ext_resource type="Script" uid="uid://baaufandy3r82" path="res://funcionesdeteclado.gd" id="1_ig7tw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
 size = Vector3(32, 1, 32)
@@ -37,6 +39,7 @@ transform = Transform3D(0.531584, 0.82454175, -0.19377777, -0.66345096, 0.547563
 
 [node name="VehicleBody3D" type="VehicleBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.094326, 0)
+script = ExtResource("1_ig7tw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleBody3D"]
 shape = SubResource("BoxShape3D_ig7tw")
