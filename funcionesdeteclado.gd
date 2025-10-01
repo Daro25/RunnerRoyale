@@ -7,22 +7,32 @@ var current_health: float
 func _input(event):
 	if event.is_action_pressed("correr"):
 		print("correr occurred!")
-		$llantaTD.engine_force = 80
-		$llantaTI.engine_force = 80
-		$llantaDD.engine_force = 80
-		$llantaDI.engine_force = 80
-	if event.is_action_pressed("Reversa"):
+		$llantaTD.engine_force = 150
+		$llantaTI.engine_force = 150
+		$llantaDD.engine_force = 150
+		$llantaDI.engine_force = 150
+	elif event.is_action_pressed("Reversa"):
 		print("Reversa occurred!")
-		$llantaTD.engine_force = -80
-		$llantaTI.engine_force = -80
-		$llantaDD.engine_force = -80
-		$llantaDI.engine_force = -80
+		$llantaTD.engine_force = -150
+		$llantaTI.engine_force = -150
+		$llantaDD.engine_force = -150
+		$llantaDI.engine_force = -150
+	#else:
+		#$llantaTD.engine_force = 0
+		#$llantaTI.engine_force = 0
+		#$llantaDD.engine_force = 0
+		#$llantaDI.engine_force = 0
 	if event.is_action_pressed("Izquierda"):
 		print("Izquierda occurred!")
 		$llantaDI.steering = deg_to_rad(30)
-	if event.is_action_pressed("Derecha"):
+		$llantaDD.steering = deg_to_rad(30)
+	elif event.is_action_pressed("Derecha"):
 		$llantaDD.steering = deg_to_rad(-30)
+		$llantaDI.steering = deg_to_rad(-30)
 		print("Derecha occurred!")
+	#else:
+		#$llantaDD.steering = deg_to_rad(0)
+		#$llantaDI.steering = deg_to_rad(0)
 	if event.is_action_pressed("salto"):
 		print("salto occurred!")
 	if event.is_action_pressed("Remolcar"):

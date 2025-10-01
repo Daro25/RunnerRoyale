@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dociokbx2la3q"]
+[gd_scene load_steps=9 format=3 uid="uid://dociokbx2la3q"]
 
 [ext_resource type="Script" uid="uid://baaufandy3r82" path="res://funcionesdeteclado.gd" id="1_ig7tw"]
 
@@ -10,6 +10,10 @@ size = Vector3(32, 1, 32)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_color = Color(0.13621941, 0.2622734, 1, 1)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ig7tw"]
+friction = 0.6
+absorbent = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
 size = Vector3(5, 2, 3)
@@ -39,6 +43,8 @@ transform = Transform3D(0.531584, 0.82454175, -0.19377777, -0.66345096, 0.547563
 
 [node name="VehicleBody3D" type="VehicleBody3D" parent="." node_paths=PackedStringArray("health_bar")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.094326, 0)
+mass = 600.0
+physics_material_override = SubResource("PhysicsMaterial_ig7tw")
 script = ExtResource("1_ig7tw")
 health_bar = NodePath("CanvasLayer/ProgressBar")
 
@@ -52,6 +58,11 @@ skeleton = NodePath("")
 [node name="llantaTI" type="VehicleWheel3D" parent="VehicleBody3D"]
 transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 1.0340345, -1.25, 1.494772)
 use_as_traction = true
+wheel_radius = 0.7
+wheel_friction_slip = 7.0
+suspension_stiffness = 20.0
+damping_compression = 0.3
+damping_relaxation = 0.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/llantaTI"]
 transform = Transform3D(-4.3711374e-08, 0.9999997, 3.5527137e-15, -1, -4.3711385e-08, 0, 0, -3.5527137e-15, 0.9999997, 0, 0, 0)
@@ -60,6 +71,11 @@ mesh = SubResource("CylinderMesh_7dm0k")
 [node name="llantaDI" type="VehicleWheel3D" parent="VehicleBody3D"]
 transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, -1.5975187, -1.25, 1.494772)
 use_as_steering = true
+wheel_radius = 0.7
+wheel_friction_slip = 7.0
+suspension_stiffness = 20.0
+damping_compression = 0.3
+damping_relaxation = 0.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/llantaDI"]
 transform = Transform3D(-4.3711374e-08, 0.9999997, 3.5527137e-15, -1, -4.3711385e-08, 0, 0, -3.5527137e-15, 0.9999997, 0, 0, 0)
@@ -68,6 +84,11 @@ mesh = SubResource("CylinderMesh_7dm0k")
 [node name="llantaDD" type="VehicleWheel3D" parent="VehicleBody3D"]
 transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, -1.5975187, -1.25, -1.4469604)
 use_as_steering = true
+wheel_radius = 0.7
+wheel_friction_slip = 7.0
+suspension_stiffness = 20.0
+damping_compression = 0.3
+damping_relaxation = 0.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/llantaDD"]
 transform = Transform3D(-4.3711374e-08, 0.9999997, 3.5527137e-15, -1, -4.3711385e-08, 0, 0, -3.5527137e-15, 0.9999997, 0, 0, 0)
@@ -76,6 +97,11 @@ mesh = SubResource("CylinderMesh_7dm0k")
 [node name="llantaTD" type="VehicleWheel3D" parent="VehicleBody3D"]
 transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 1.034, -1.25, -1.5076685)
 use_as_traction = true
+wheel_radius = 0.7
+wheel_friction_slip = 7.0
+suspension_stiffness = 20.0
+damping_compression = 0.3
+damping_relaxation = 0.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/llantaTD"]
 transform = Transform3D(-4.3711374e-08, 0.9999997, 3.5527137e-15, -1, -4.3711385e-08, 0, 0, -3.5527137e-15, 0.9999997, 0, 0, 0)
