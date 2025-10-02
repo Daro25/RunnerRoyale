@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://dociokbx2la3q"]
+[gd_scene load_steps=9 format=3 uid="uid://dociokbx2la3q"]
 
 [ext_resource type="Script" uid="uid://baaufandy3r82" path="res://funcionesdeteclado.gd" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://c8sfs3sbspfh5" path="res://camara3d.gd" id="2_0xm2m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
 size = Vector3(32, 1, 32)
@@ -110,19 +109,6 @@ mesh = SubResource("CylinderMesh_7dm0k")
 [node name="ProgressBar" type="ProgressBar" parent="VehicleBody3D/CanvasLayer"]
 offset_right = 257.0
 offset_bottom = 27.0
-
-[node name="ControlCamara" type="Node3D" parent="VehicleBody3D"]
-visible = false
-
-[node name="SpringArm3D" type="SpringArm3D" parent="VehicleBody3D/ControlCamara"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.391016, 2.709446, 0)
-visible = false
-script = ExtResource("2_0xm2m")
-
-[node name="Camera3D" type="Camera3D" parent="VehicleBody3D/ControlCamara/SpringArm3D"]
-transform = Transform3D(0.011949508, 0.08027469, 0.9967012, 0.005729141, 0.9967505, -0.08034736, -0.9999122, 0.006670353, 0.011450773, 21.126902, 2.3116732, -0.45767784)
-visible = false
-fov = 66.21373
 
 [node name="Camera3D" type="Camera3D" parent="VehicleBody3D"]
 transform = Transform3D(-4.3511537e-08, -0.09551566, 0.9954279, -4.175122e-09, 0.9954279, 0.09551566, -1, 0, -4.371139e-08, 6.414, 2.158, 0)
