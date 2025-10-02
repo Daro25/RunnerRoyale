@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dociokbx2la3q"]
+[gd_scene load_steps=10 format=3 uid="uid://dociokbx2la3q"]
 
+[ext_resource type="Texture2D" uid="uid://3abldfhiyyf4" path="res://mosaicoArt.jpg" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://baaufandy3r82" path="res://funcionesdeteclado.gd" id="1_ig7tw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
@@ -8,8 +9,9 @@ size = Vector3(32, 1, 32)
 [sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
 size = Vector3(32, 1, 32)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
-albedo_color = Color(0.13621941, 0.2622734, 1, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_texture = ExtResource("1_0xm2m")
+albedo_texture_force_srgb = true
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ig7tw"]
 friction = 0.6
@@ -33,13 +35,13 @@ shape = SubResource("BoxShape3D_7dm0k")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="suelo"]
 mesh = SubResource("BoxMesh_ig7tw")
-surface_material_override/0 = SubResource("StandardMaterial3D_0xm2m")
+surface_material_override/0 = SubResource("StandardMaterial3D_h2yge")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.531584, 0.82454175, -0.19377777, -0.66345096, 0.54756373, 0.50990903, 0.5265468, -0.14249729, 0.83811885, 0, 0, 0)
 
 [node name="VehicleBody3D" type="VehicleBody3D" parent="." node_paths=PackedStringArray("health_bar")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.094326, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.32586, 0)
 mass = 600.0
 physics_material_override = SubResource("PhysicsMaterial_ig7tw")
 script = ExtResource("1_ig7tw")
