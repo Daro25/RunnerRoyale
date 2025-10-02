@@ -1,7 +1,6 @@
 extends VehicleBody3D
 @export var max_health: float = 100.0
 var current_health: float
-
 @export var health_bar: ProgressBar
 
 func _input(event):
@@ -41,7 +40,7 @@ func _input(event):
 		print("Reparar occurred!")
 	if event.is_action_pressed("Disparar"):
 		print("Disparar occurred!")
-
+	
 #Barra de vida
 signal died
 func _ready():
