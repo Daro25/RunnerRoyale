@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dlh7q8vqnmulb"]
+[gd_scene load_steps=24 format=3 uid="uid://dlh7q8vqnmulb"]
 
 [ext_resource type="Material" uid="uid://bj14rkvcmdkwv" path="res://pasto/pasto.tres" id="1_2pmvx"]
 [ext_resource type="ArrayMesh" uid="uid://c3fgcr2ttngrd" path="res://modelos/PrimerMapa.obj" id="1_4tq76"]
@@ -10,6 +10,7 @@
 [ext_resource type="Material" uid="uid://d0d71kwnhjkvd" path="res://hojas/hojas.tres" id="7_lac0w"]
 [ext_resource type="Shader" uid="uid://dph5oskvv1fs7" path="res://sky.gdshader" id="9_4n084"]
 [ext_resource type="Script" uid="uid://baaufandy3r82" path="res://scripts/funcionesdeteclado.gd" id="10_5jcn1"]
+[ext_resource type="PhysicsMaterial" uid="uid://ci52lwixy1pi3" path="res://PrimeraPista_Fisica.tres" id="10_reio3"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5jcn1"]
 points = PackedVector3Array(2.142939, 0.817904, -0.18033469, 2.4907212, 0.817904, 0.7478335, 2.7777913, 3.8496222, -0.25853574, 2.9661732, 3.8084178, -0.8913891, 2.4907212, 0.817904, -1.108503, 3.4188895, 0.817904, 1.0961151, 3.6162658, 3.8821216, 0.5759413, 3.0176408, 3.8333726, 0.35682857, 3.3649232, 5.6457877, 0.060764194, 3.3162036, 5.9812264, -0.33373857, 3.310707, 5.621413, -0.72074604, 3.6784768, 5.993414, -0.8284285, 3.5622995, 3.8612292, -1.1624691, 3.4188895, 0.817904, -1.456285, 4.3470573, 0.817904, 0.7478335, 4.057489, 5.675966, 0.019040346, 3.7381892, 6.017208, 0.08374977, 4.1954026, 3.8548453, 0.33209407, 3.749682, 6.746701, -0.39969718, 4.0212617, 5.664939, -0.79594886, 4.1701684, 3.8496222, -0.96559256, 4.3470573, 0.817904, -1.108503, 4.695339, 0.817904, -0.18033469, 4.400774, 3.8931482, -0.3279922, 4.100462, 6.029395, -0.41094017)
@@ -107,11 +108,13 @@ mesh = ExtResource("2_aob8a")
 surface_material_override/0 = SubResource("ShaderMaterial_4tq76")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Escena/Carretera"]
+physics_material_override = ExtResource("10_reio3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Escena/Carretera/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_5jcn1")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Escena"]
+physics_material_override = ExtResource("10_reio3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Escena/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_reio3")

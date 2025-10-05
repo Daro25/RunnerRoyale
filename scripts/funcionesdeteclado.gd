@@ -21,13 +21,13 @@ func _physics_process(delta: float) -> void:
 		$llantaDD.steering = deg_to_rad(0)
 		$llantaDI.steering = deg_to_rad(0)
 	if Input.is_action_pressed("ui_up"):
-		$llantaTD.engine_force = 500
-		$llantaTI.engine_force = 500
+		$llantaTD.engine_force = 800
+		$llantaTI.engine_force = 800
 		$llantaDD.engine_force = 800
 		$llantaDI.engine_force = 800
 	elif Input.is_action_pressed("ui_down"):
-		$llantaTD.engine_force = -500
-		$llantaTI.engine_force = -500
+		$llantaTD.engine_force = -800
+		$llantaTI.engine_force = -800
 		$llantaDD.engine_force = -800
 		$llantaDI.engine_force = -800
 	else:
