@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlh7q8vqnmulb"]
+
+[ext_resource type="Material" uid="uid://bj14rkvcmdkwv" path="res://asfalto/asfalt.tres" id="1_2pmvx"]
+[ext_resource type="ArrayMesh" uid="uid://c3fgcr2ttngrd" path="res://PrimerMapa.obj" id="1_4tq76"]
+[ext_resource type="Material" uid="uid://c5008jvk64w6t" path="res://paviment/asfalto.tres" id="2_2pmvx"]
+[ext_resource type="ArrayMesh" uid="uid://c8nuc02pwy2gd" path="res://carreteraPMapa.obj" id="2_aob8a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4tq76"]
+albedo_color = Color(0.045191806, 0.27487475, 0.009858438, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4tq76"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_2pmvx")
+mesh = ExtResource("1_4tq76")
+surface_material_override/0 = SubResource("StandardMaterial3D_4tq76")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+material_override = ExtResource("2_2pmvx")
+mesh = ExtResource("2_aob8a")
+surface_material_override/0 = SubResource("ShaderMaterial_4tq76")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
