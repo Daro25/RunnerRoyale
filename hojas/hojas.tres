@@ -1,0 +1,24 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://d0d71kwnhjkvd"]
+
+[ext_resource type="Texture2D" uid="uid://devqskofwa3g3" path="res://hojas/Grass006_2K-PNG_Color.png" id="1_o5q6n"]
+[ext_resource type="Texture2D" uid="uid://im742vjhcy7m" path="res://hojas/Grass006_2K-PNG_AmbientOcclusion.png" id="2_vr05t"]
+[ext_resource type="Texture2D" uid="uid://dmsudv3kakul5" path="res://hojas/Grass006_2K-PNG_NormalGL.png" id="3_6s8xg"]
+[ext_resource type="Texture2D" uid="uid://v58kx83fgma2" path="res://hojas/Grass006_2K-PNG_Roughness.png" id="4_jftqd"]
+
+[resource]
+diffuse_mode = 3
+albedo_color = Color(0, 0.93333334, 0.2509804, 1)
+albedo_texture = ExtResource("1_o5q6n")
+metallic_specular = 0.0
+roughness_texture = ExtResource("4_jftqd")
+normal_enabled = true
+normal_scale = 16.0
+normal_texture = ExtResource("3_6s8xg")
+ao_enabled = true
+ao_texture = ExtResource("2_vr05t")
+heightmap_scale = 16.0
+uv1_scale = Vector3(1.22, 1.22, 1.22)
+uv1_triplanar_sharpness = 0.015092748
+uv1_world_triplanar = true
+uv2_triplanar_sharpness = 0.0008801271
+grow = true

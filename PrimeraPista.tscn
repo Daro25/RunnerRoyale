@@ -1,25 +1,73 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlh7q8vqnmulb"]
+[gd_scene load_steps=14 format=3 uid="uid://dlh7q8vqnmulb"]
 
-[ext_resource type="Material" uid="uid://bj14rkvcmdkwv" path="res://asfalto/asfalt.tres" id="1_2pmvx"]
-[ext_resource type="ArrayMesh" uid="uid://c3fgcr2ttngrd" path="res://PrimerMapa.obj" id="1_4tq76"]
-[ext_resource type="Material" uid="uid://c5008jvk64w6t" path="res://paviment/asfalto.tres" id="2_2pmvx"]
-[ext_resource type="ArrayMesh" uid="uid://c8nuc02pwy2gd" path="res://carreteraPMapa.obj" id="2_aob8a"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4tq76"]
-albedo_color = Color(0.045191806, 0.27487475, 0.009858438, 1)
+[ext_resource type="Material" uid="uid://bj14rkvcmdkwv" path="res://pasto/pasto.tres" id="1_2pmvx"]
+[ext_resource type="ArrayMesh" uid="uid://c3fgcr2ttngrd" path="res://modelos/PrimerMapa.obj" id="1_4tq76"]
+[ext_resource type="Material" uid="uid://c5008jvk64w6t" path="res://paviment/paviment.tres" id="2_2pmvx"]
+[ext_resource type="ArrayMesh" uid="uid://c8nuc02pwy2gd" path="res://modelos/carreteraPMapa.obj" id="2_aob8a"]
+[ext_resource type="Material" uid="uid://couynhusrg5j3" path="res://cortesa/cortesa.tres" id="5_4jjbs"]
+[ext_resource type="ArrayMesh" uid="uid://b8bwpg3a2d0af" path="res://modelos/arbolAdriantronco.obj" id="6_lac0w"]
+[ext_resource type="ArrayMesh" uid="uid://bmtgroml4rkbj" path="res://modelos/arbolAdrianhojas.obj" id="7_4n084"]
+[ext_resource type="Material" uid="uid://d0d71kwnhjkvd" path="res://hojas/hojas.tres" id="7_lac0w"]
+[ext_resource type="Shader" uid="uid://dph5oskvv1fs7" path="res://sky.gdshader" id="9_4n084"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4tq76"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5jcn1"]
+shader = ExtResource("9_4n084")
+shader_parameter/Exponer = 1.70000002533204
+shader_parameter/TonoMapa = 0.766000036385
+shader_parameter/NivelContraste = 0.0
+shader_parameter/ColorFondo = Vector4(0.3, 0.3, 0.3, 0)
+shader_parameter/_OscuridadAtmosfera = 0.936
+shader_parameter/_ItensidadSol = 30.0
+shader_parameter/_EspesorAtmosfera = 1.0
+shader_parameter/_ColorDiaAtmosfera = Vector4(1, 1, 1, 1)
+shader_parameter/_ColorNocheAtmosfera = Vector4(0.02, 0.03, 0.04, 1)
+shader_parameter/_ColorHorizonte = Vector4(0.980392, 0.635294, 0.462745, 1)
+shader_parameter/_AtmosferaParametros = Vector3(1, 0, 0)
+shader_parameter/_SolTamanio = 0.01
+shader_parameter/_SolIntensidad = 1.90000002831228
+shader_parameter/_SolBrillo = 0.99999988079071
+shader_parameter/_SolColor = Vector4(1, 1, 1, 1)
+shader_parameter/sol_color_disco = Vector4(0.99, 0.49, 0.22, 1)
+shader_parameter/sol_intensidad_disco = 1.3
+shader_parameter/sol_tamanio_disco = 0.009
+
+[sub_resource type="Sky" id="Sky_reio3"]
+sky_material = SubResource("ShaderMaterial_5jcn1")
+
+[sub_resource type="Environment" id="Environment_23qqr"]
+background_mode = 2
+sky = SubResource("Sky_reio3")
 
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_override = ExtResource("1_2pmvx")
 mesh = ExtResource("1_4tq76")
-surface_material_override/0 = SubResource("StandardMaterial3D_4tq76")
+surface_material_override/0 = ExtResource("1_2pmvx")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
 material_override = ExtResource("2_2pmvx")
 mesh = ExtResource("2_aob8a")
 surface_material_override/0 = SubResource("ShaderMaterial_4tq76")
 
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.349, 0)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3488452, 0)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.98331213, -2.5331648e-09, 0.18192661, 0.069887154, 0.9232706, 0.37773964, -0.16796748, 0.38415027, -0.9078632, 5.2274265, 11.482304, -18.480051)
+current = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_23qqr")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.31571525, 0.94885397, 0, -0.94885397, 0.31571525, 0, 25.83574, 0)

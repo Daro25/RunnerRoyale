@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dociokbx2la3q"]
 
 [ext_resource type="Texture2D" uid="uid://3abldfhiyyf4" path="res://mosaicoArt.jpg" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://baaufandy3r82" path="res://funcionesdeteclado.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://baaufandy3r82" path="res://scripts/funcionesdeteclado.gd" id="1_ig7tw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
 size = Vector3(32, 1, 32)

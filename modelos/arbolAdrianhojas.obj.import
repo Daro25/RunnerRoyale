@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bmtgroml4rkbj"
+path="res://.godot/imported/arbolAdrianhojas.obj-6538fcf76d44a685644410c5a7de7521.mesh"
+
+[deps]
+
+files=["res://.godot/imported/arbolAdrianhojas.obj-6538fcf76d44a685644410c5a7de7521.mesh"]
+
+source_file="res://modelos/arbolAdrianhojas.obj"
+dest_files=["res://.godot/imported/arbolAdrianhojas.obj-6538fcf76d44a685644410c5a7de7521.mesh", "res://.godot/imported/arbolAdrianhojas.obj-6538fcf76d44a685644410c5a7de7521.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
