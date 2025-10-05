@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dlh7q8vqnmulb"]
+[gd_scene load_steps=31 format=3 uid="uid://dlh7q8vqnmulb"]
 
 [ext_resource type="Material" uid="uid://bj14rkvcmdkwv" path="res://pasto/pasto.tres" id="1_2pmvx"]
 [ext_resource type="ArrayMesh" uid="uid://c3fgcr2ttngrd" path="res://modelos/PrimerMapa.obj" id="1_4tq76"]
@@ -11,6 +11,10 @@
 [ext_resource type="Shader" uid="uid://dph5oskvv1fs7" path="res://sky.gdshader" id="9_4n084"]
 [ext_resource type="Script" uid="uid://baaufandy3r82" path="res://scripts/funcionesdeteclado.gd" id="10_5jcn1"]
 [ext_resource type="PhysicsMaterial" uid="uid://ci52lwixy1pi3" path="res://PrimeraPista_Fisica.tres" id="10_reio3"]
+[ext_resource type="Texture2D" uid="uid://bh4pijiat3kjs" path="res://paviment/PavingStones138_2K-PNG_NormalGL.png" id="12_3i3gk"]
+[ext_resource type="Script" uid="uid://bouwhdvuu8r3f" path="res://scripts/propulsion.gd" id="12_f18ej"]
+[ext_resource type="Material" uid="uid://vc3y15wlhtu2" path="res://propulsores/Aceleración.tres" id="13_f18ej"]
+[ext_resource type="PlaneMesh" uid="uid://bf1vuruqnuyu2" path="res://modelos/plano.tres" id="14_hxhew"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5jcn1"]
 points = PackedVector3Array(2.142939, 0.817904, -0.18033469, 2.4907212, 0.817904, 0.7478335, 2.7777913, 3.8496222, -0.25853574, 2.9661732, 3.8084178, -0.8913891, 2.4907212, 0.817904, -1.108503, 3.4188895, 0.817904, 1.0961151, 3.6162658, 3.8821216, 0.5759413, 3.0176408, 3.8333726, 0.35682857, 3.3649232, 5.6457877, 0.060764194, 3.3162036, 5.9812264, -0.33373857, 3.310707, 5.621413, -0.72074604, 3.6784768, 5.993414, -0.8284285, 3.5622995, 3.8612292, -1.1624691, 3.4188895, 0.817904, -1.456285, 4.3470573, 0.817904, 0.7478335, 4.057489, 5.675966, 0.019040346, 3.7381892, 6.017208, 0.08374977, 4.1954026, 3.8548453, 0.33209407, 3.749682, 6.746701, -0.39969718, 4.0212617, 5.664939, -0.79594886, 4.1701684, 3.8496222, -0.96559256, 4.3470573, 0.817904, -1.108503, 4.695339, 0.817904, -0.18033469, 4.400774, 3.8931482, -0.3279922, 4.100462, 6.029395, -0.41094017)
@@ -66,6 +70,19 @@ size = Vector3(5, 2, 3)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_3i3gk"]
 height = 0.2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r7lbv"]
+size = Vector3(15, 2, 15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i1ly0"]
+size = Vector3(15, 1, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wc844"]
+albedo_color = Color(0.047058824, 0.64705884, 1, 1)
+normal_texture = ExtResource("12_3i3gk")
+distance_fade_mode = 2
+distance_fade_min_distance = 5.0
+distance_fade_max_distance = 100.0
 
 [node name="Node3D" type="Node3D"]
 
@@ -194,3 +211,24 @@ offset_bottom = 27.0
 [node name="Camera3D" type="Camera3D" parent="VehicleBody3D"]
 transform = Transform3D(-4.3511537e-08, -0.09551566, 0.9954279, -4.175122e-09, 0.9954279, 0.09551566, -1, 0, -4.371139e-08, 6.414, 2.158, 0)
 current = true
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.934273, 0.35306475, 0.049795512, -0.33893076, 0.9227482, -0.18347095, -0.11072587, 0.1545347, 0.98176306, -46.057373, -16.960663, 93.12922)
+script = ExtResource("12_f18ej")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_r7lbv")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D"]
+mesh = SubResource("BoxMesh_i1ly0")
+surface_material_override/0 = SubResource("StandardMaterial3D_wc844")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D/MeshInstance3D2"]
+transform = Transform3D(-2.9802322e-08, 1.1175871e-08, 1, 0, 0.9999999, 1.4901161e-08, -0.9999999, 0, 0, 0, -0.2, 0)
+material_override = ExtResource("13_f18ej")
+mesh = ExtResource("14_hxhew")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("13_f18ej")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

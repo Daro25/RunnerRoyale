@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://vc3y15wlhtu2"]
+
+[ext_resource type="Texture2D" uid="uid://bjlavdxk1mrsn" path="res://propulsores/acelerar.png" id="1_o6gfb"]
+[ext_resource type="Texture2D" uid="uid://bh4pijiat3kjs" path="res://paviment/PavingStones138_2K-PNG_NormalGL.png" id="2_esuoa"]
+
+[resource]
+albedo_texture = ExtResource("1_o6gfb")
+normal_enabled = true
+normal_scale = 16.0
+normal_texture = ExtResource("2_esuoa")
