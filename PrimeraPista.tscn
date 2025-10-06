@@ -110,11 +110,11 @@ skeleton = NodePath("../../..")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_23qqr")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, 0.31571525, 0.94885397, 0, -0.94885397, 0.31571525, 0, 25.83574, 0)
 
 [node name="Escena" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
 material_override = ExtResource("1_2pmvx")
 mesh = ExtResource("1_4tq76")
 surface_material_override/0 = ExtResource("1_2pmvx")
@@ -137,7 +137,7 @@ physics_material_override = ExtResource("10_reio3")
 shape = SubResource("ConcavePolygonShape3D_reio3")
 
 [node name="VehicleBody3D" type="VehicleBody3D" parent="." node_paths=PackedStringArray("health_bar")]
-transform = Transform3D(0.055734426, 0, 0.99844563, 0, 1, 0, -0.99844563, 0, 0.055734426, 118.60982, 13.6887245, -5.397003)
+transform = Transform3D(0.055734426, 0, 0.99844563, 0, 1, 0, -0.99844563, 0, 0.055734426, 118.60982, 9.647955, -5.397003)
 mass = 600.0
 physics_material_override = SubResource("PhysicsMaterial_reio3")
 script = ExtResource("10_5jcn1")
@@ -213,7 +213,7 @@ transform = Transform3D(-4.3511537e-08, -0.09551566, 0.9954279, -4.175122e-09, 0
 current = true
 
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(0.934273, 0.35306475, 0.049795512, -0.33893076, 0.9227482, -0.18347095, -0.11072587, 0.1545347, 0.98176306, -46.057373, -16.960663, 93.12922)
+transform = Transform3D(0.91521245, 0.26864788, 0.30035758, -0.22468357, 0.9589387, -0.1730719, -0.33452004, 0.09091218, 0.93799335, -46.057373, -10.855201, 93.12922)
 script = ExtResource("12_f18ej")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
