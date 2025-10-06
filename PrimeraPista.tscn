@@ -107,6 +107,358 @@ material_override = ExtResource("7_lac0w")
 mesh = ExtResource("7_4n084")
 skeleton = NodePath("../../..")
 
+[node name="Arbol8" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14.272079, 148.79704)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol8"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol8/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol8"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol8/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol9" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1751504, -15.270855, 148.79704)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol9"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol9/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol9"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol9/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol10" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.440696, -15.829625, 148.89786)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol10"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol10/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol10"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol10/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol11" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.588826, -16.545073, 148.89786)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol11"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol11/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol11"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol11/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol12" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.038705, -16.753689, 148.79704)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol12"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol12/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol12"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol12/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol13" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.213856, -17.752464, 148.79704)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol13"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol13/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol13"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol13/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol14" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4794, -18.311234, 148.89786)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol14"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol14/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol14"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol14/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol15" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.627531, -19.026682, 148.89786)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol15"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol15/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol15"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol15/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol16" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.784395, -18.455776, 148.79704)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol16"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol16/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol16"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol16/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol17" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.959545, -18.627396, 148.79704)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol17"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol17/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol17"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol17/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol18" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.22509, -18.831566, 148.89786)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol18"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol18/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol18"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol18/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol19" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.373222, -18.698269, 148.89786)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol19"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol19/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol19"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol19/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol20" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.8231, -18.384842, 148.79704)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol20"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol20/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol20"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol20/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol21" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.998253, -18.074383, 148.79704)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol21"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol21/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol21"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol21/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol22" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.263794, -17.749323, 148.89786)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol22"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol22/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol22"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol22/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
+[node name="Arbol23" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.411926, -17.488316, 148.89786)
+
+[node name="troncoCollision" type="CollisionShape3D" parent="Arbol23"]
+shape = SubResource("ConvexPolygonShape3D_5jcn1")
+
+[node name="ArbolAdriantronco" type="MeshInstance3D" parent="Arbol23/troncoCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043593407, 0.73259234, 0.15814209)
+material_override = ExtResource("5_4jjbs")
+mesh = ExtResource("6_lac0w")
+skeleton = NodePath("../../..")
+
+[node name="hojasCollision" type="CollisionShape3D" parent="Arbol23"]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.49999997, 0.49999997, -0.70710677, 0.49999997, 0.49999997, 0.70710677, 3.4717648, 7.1101637, -0.2548589)
+shape = SubResource("BoxShape3D_5jcn1")
+
+[node name="ArbolAdrianhojas" type="MeshInstance3D" parent="Arbol23/hojasCollision"]
+transform = Transform3D(0.7071067, 0.49999997, 0.49999997, -0.7071067, 0.49999997, 0.49999997, 0, -0.7071067, 0.7071067, -5.882638, -0.97282124, 5.207967)
+material_override = ExtResource("7_lac0w")
+mesh = ExtResource("7_4n084")
+skeleton = NodePath("../../..")
+
 [node name="Arbol2" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.221344, -0.9851825, 25.815615)
 
