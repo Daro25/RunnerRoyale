@@ -2233,7 +2233,7 @@ theme_override_font_sizes/font_size = 70
 text = "Mision Fallada"
 
 [node name="Point" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.655235, -10.406625, -95.53662)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.655235, 3.2415524, -99.49081)
 script = ExtResource("17_i1ly0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Point"]
@@ -2246,7 +2246,7 @@ shape = SubResource("BoxShape3D_mn0ix")
 debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
 
 [node name="Point3" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.383995, -10.406625, -73.94418)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.058964, -4.468882, -61.082085)
 script = ExtResource("17_i1ly0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Point3"]
@@ -2259,7 +2259,7 @@ shape = SubResource("BoxShape3D_mn0ix")
 debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
 
 [node name="Point4" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.739056, -10.406625, -74.598495)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.180508, -1.6873074, -73.90738)
 script = ExtResource("17_i1ly0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Point4"]
@@ -2272,7 +2272,7 @@ shape = SubResource("BoxShape3D_mn0ix")
 debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
 
 [node name="Point5" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -113.29412, -10.406625, -41.882675)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.96989, -2.758745, -41.457737)
 script = ExtResource("17_i1ly0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Point5"]
@@ -2285,7 +2285,7 @@ shape = SubResource("BoxShape3D_mn0ix")
 debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
 
 [node name="Point6" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -128.99768, -10.406625, 37.289654)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -130.85446, -4.5263867, 39.577244)
 script = ExtResource("17_i1ly0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Point6"]
@@ -2298,7 +2298,7 @@ shape = SubResource("BoxShape3D_mn0ix")
 debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
 
 [node name="Point7" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.133644, -10.406625, 98.79544)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -107.56176, -6.3097477, 95.82583)
 script = ExtResource("17_i1ly0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Point7"]
@@ -2311,7 +2311,7 @@ shape = SubResource("BoxShape3D_mn0ix")
 debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
 
 [node name="Point8" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.504528, -10.406625, 85.05478)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.50465, -19.029638, 82.74205)
 script = ExtResource("17_i1ly0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Point8"]
@@ -2324,7 +2324,7 @@ shape = SubResource("BoxShape3D_mn0ix")
 debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
 
 [node name="Point9" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.42104, -10.406625, 87.01775)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.390888, -19.650475, 85.88623)
 script = ExtResource("17_i1ly0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Point9"]
@@ -2337,7 +2337,7 @@ shape = SubResource("BoxShape3D_mn0ix")
 debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
 
 [node name="Point10" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.55817, -10.406626, 50.70291)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.26088, -5.5130043, 49.340137)
 script = ExtResource("17_i1ly0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Point10"]
@@ -2350,7 +2350,7 @@ shape = SubResource("BoxShape3D_mn0ix")
 debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
 
 [node name="Point2" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.790855, -10.406625, -47.44278)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.069084, 1.0635238, -52.68301)
 script = ExtResource("17_i1ly0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Point2"]
