@@ -1,8 +1,8 @@
-[gd_scene load_steps=41 format=3 uid="uid://dlh7q8vqnmulb"]
+[gd_scene load_steps=43 format=3 uid="uid://dlh7q8vqnmulb"]
 
 [ext_resource type="Material" uid="uid://bj14rkvcmdkwv" path="res://pasto/pasto.tres" id="1_2pmvx"]
 [ext_resource type="ArrayMesh" uid="uid://c3fgcr2ttngrd" path="res://modelos/PrimerMapa.obj" id="1_4tq76"]
-[ext_resource type="Script" uid="uid://cnnuw2oabnjb1" path="res://primera_pista.gd" id="1_i1ly0"]
+[ext_resource type="Script" path="res://primera_pista.gd" id="1_i1ly0"]
 [ext_resource type="Material" uid="uid://c5008jvk64w6t" path="res://paviment/paviment.tres" id="2_2pmvx"]
 [ext_resource type="ArrayMesh" uid="uid://c8nuc02pwy2gd" path="res://modelos/carreteraPMapa.obj" id="2_aob8a"]
 [ext_resource type="Material" uid="uid://couynhusrg5j3" path="res://cortesa/cortesa.tres" id="5_4jjbs"]
@@ -15,9 +15,12 @@
 [ext_resource type="Texture2D" uid="uid://bh4pijiat3kjs" path="res://paviment/PavingStones138_2K-PNG_NormalGL.png" id="12_3i3gk"]
 [ext_resource type="Script" uid="uid://bouwhdvuu8r3f" path="res://scripts/propulsion.gd" id="12_f18ej"]
 [ext_resource type="Material" uid="uid://vc3y15wlhtu2" path="res://propulsores/Aceleración.tres" id="13_f18ej"]
+[ext_resource type="Material" uid="uid://grdut3eio3xb" path="res://modelos/carr.tres" id="13_mn0ix"]
 [ext_resource type="PlaneMesh" uid="uid://bf1vuruqnuyu2" path="res://modelos/plano.tres" id="14_hxhew"]
-[ext_resource type="Script" uid="uid://cnx2fnq20mw2o" path="res://meta.gd" id="16_r7lbv"]
-[ext_resource type="Script" uid="uid://sqcd365kovit" path="res://point.gd" id="17_i1ly0"]
+[ext_resource type="ArrayMesh" uid="uid://b6far7ntktdf0" path="res://modelos/lowpoly car.obj" id="14_xkier"]
+[ext_resource type="Material" uid="uid://bvqry1ri5fodi" path="res://modelos/llanta.tres" id="15_xkier"]
+[ext_resource type="Script" path="res://meta.gd" id="16_r7lbv"]
+[ext_resource type="Script" path="res://point.gd" id="17_i1ly0"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5jcn1"]
 points = PackedVector3Array(2.142939, 0.817904, -0.18033469, 2.4907212, 0.817904, 0.7478335, 2.7777913, 3.8496222, -0.25853574, 2.9661732, 3.8084178, -0.8913891, 2.4907212, 0.817904, -1.108503, 3.4188895, 0.817904, 1.0961151, 3.6162658, 3.8821216, 0.5759413, 3.0176408, 3.8333726, 0.35682857, 3.3649232, 5.6457877, 0.060764194, 3.3162036, 5.9812264, -0.33373857, 3.310707, 5.621413, -0.72074604, 3.6784768, 5.993414, -0.8284285, 3.5622995, 3.8612292, -1.1624691, 3.4188895, 0.817904, -1.456285, 4.3470573, 0.817904, 0.7478335, 4.057489, 5.675966, 0.019040346, 3.7381892, 6.017208, 0.08374977, 4.1954026, 3.8548453, 0.33209407, 3.749682, 6.746701, -0.39969718, 4.0212617, 5.664939, -0.79594886, 4.1701684, 3.8496222, -0.96559256, 4.3470573, 0.817904, -1.108503, 4.695339, 0.817904, -0.18033469, 4.400774, 3.8931482, -0.3279922, 4.100462, 6.029395, -0.41094017)
@@ -66,10 +69,7 @@ friction = 0.6
 absorbent = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_23qqr"]
-size = Vector3(5, 2, 3)
-
-[sub_resource type="BoxMesh" id="BoxMesh_khmo2"]
-size = Vector3(5, 2, 3)
+size = Vector3(5, 1.3417969, 3)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_3i3gk"]
 height = 0.2
@@ -2074,10 +2074,13 @@ script = ExtResource("10_5jcn1")
 health_bar = NodePath("CanvasLayer/ProgressBar")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.32910156, 0)
 shape = SubResource("BoxShape3D_23qqr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D"]
-mesh = SubResource("BoxMesh_khmo2")
+transform = Transform3D(-4.4703484e-08, 0, -1, 0, 1, 0, 1, 0, -4.4703484e-08, 0, -1.4668417, 0)
+material_override = ExtResource("13_mn0ix")
+mesh = ExtResource("14_xkier")
 skeleton = NodePath("")
 
 [node name="llantaTI" type="VehicleWheel3D" parent="VehicleBody3D"]
@@ -2092,6 +2095,7 @@ damping_relaxation = 0.5
 [node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/llantaTI"]
 transform = Transform3D(-4.3711374e-08, 0.9999997, 3.5527137e-15, -1, -4.3711385e-08, 0, 0, -3.5527137e-15, 0.9999997, 0, 0, 0)
 mesh = SubResource("CylinderMesh_3i3gk")
+surface_material_override/0 = ExtResource("15_xkier")
 
 [node name="llantaDI" type="VehicleWheel3D" parent="VehicleBody3D"]
 transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, -1.5975187, -1.25, 1.494772)
@@ -2104,6 +2108,7 @@ damping_relaxation = 0.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/llantaDI"]
 transform = Transform3D(-4.3711374e-08, 0.9999997, 3.5527137e-15, -1, -4.3711385e-08, 0, 0, -3.5527137e-15, 0.9999997, 0, 0, 0)
+material_override = ExtResource("15_xkier")
 mesh = SubResource("CylinderMesh_3i3gk")
 
 [node name="llantaDD" type="VehicleWheel3D" parent="VehicleBody3D"]
@@ -2117,6 +2122,7 @@ damping_relaxation = 0.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/llantaDD"]
 transform = Transform3D(-4.3711374e-08, 0.9999997, 3.5527137e-15, -1, -4.3711385e-08, 0, 0, -3.5527137e-15, 0.9999997, 0, 0, 0)
+material_override = ExtResource("15_xkier")
 mesh = SubResource("CylinderMesh_3i3gk")
 
 [node name="llantaTD" type="VehicleWheel3D" parent="VehicleBody3D"]
@@ -2130,6 +2136,7 @@ damping_relaxation = 0.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/llantaTD"]
 transform = Transform3D(-4.3711374e-08, 0.9999997, 3.5527137e-15, -1, -4.3711385e-08, 0, 0, -3.5527137e-15, 0.9999997, 0, 0, 0)
+material_override = ExtResource("15_xkier")
 mesh = SubResource("CylinderMesh_3i3gk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="VehicleBody3D"]
