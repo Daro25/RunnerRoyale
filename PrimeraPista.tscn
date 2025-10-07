@@ -2,7 +2,7 @@
 
 [ext_resource type="Material" uid="uid://bj14rkvcmdkwv" path="res://pasto/pasto.tres" id="1_2pmvx"]
 [ext_resource type="ArrayMesh" uid="uid://c3fgcr2ttngrd" path="res://modelos/PrimerMapa.obj" id="1_4tq76"]
-[ext_resource type="Script" path="res://primera_pista.gd" id="1_i1ly0"]
+[ext_resource type="Script" uid="uid://cnnuw2oabnjb1" path="res://primera_pista.gd" id="1_i1ly0"]
 [ext_resource type="Material" uid="uid://c5008jvk64w6t" path="res://paviment/paviment.tres" id="2_2pmvx"]
 [ext_resource type="ArrayMesh" uid="uid://c8nuc02pwy2gd" path="res://modelos/carreteraPMapa.obj" id="2_aob8a"]
 [ext_resource type="Material" uid="uid://couynhusrg5j3" path="res://cortesa/cortesa.tres" id="5_4jjbs"]
@@ -19,8 +19,8 @@
 [ext_resource type="PlaneMesh" uid="uid://bf1vuruqnuyu2" path="res://modelos/plano.tres" id="14_hxhew"]
 [ext_resource type="ArrayMesh" uid="uid://b6far7ntktdf0" path="res://modelos/lowpoly car.obj" id="14_xkier"]
 [ext_resource type="Material" uid="uid://bvqry1ri5fodi" path="res://modelos/llanta.tres" id="15_xkier"]
-[ext_resource type="Script" path="res://meta.gd" id="16_r7lbv"]
-[ext_resource type="Script" path="res://point.gd" id="17_i1ly0"]
+[ext_resource type="Script" uid="uid://cnx2fnq20mw2o" path="res://meta.gd" id="16_r7lbv"]
+[ext_resource type="Script" uid="uid://sqcd365kovit" path="res://point.gd" id="17_i1ly0"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5jcn1"]
 points = PackedVector3Array(2.142939, 0.817904, -0.18033469, 2.4907212, 0.817904, 0.7478335, 2.7777913, 3.8496222, -0.25853574, 2.9661732, 3.8084178, -0.8913891, 2.4907212, 0.817904, -1.108503, 3.4188895, 0.817904, 1.0961151, 3.6162658, 3.8821216, 0.5759413, 3.0176408, 3.8333726, 0.35682857, 3.3649232, 5.6457877, 0.060764194, 3.3162036, 5.9812264, -0.33373857, 3.310707, 5.621413, -0.72074604, 3.6784768, 5.993414, -0.8284285, 3.5622995, 3.8612292, -1.1624691, 3.4188895, 0.817904, -1.456285, 4.3470573, 0.817904, 0.7478335, 4.057489, 5.675966, 0.019040346, 3.7381892, 6.017208, 0.08374977, 4.1954026, 3.8548453, 0.33209407, 3.749682, 6.746701, -0.39969718, 4.0212617, 5.664939, -0.79594886, 4.1701684, 3.8496222, -0.96559256, 4.3470573, 0.817904, -1.108503, 4.695339, 0.817904, -0.18033469, 4.400774, 3.8931482, -0.3279922, 4.100462, 6.029395, -0.41094017)
