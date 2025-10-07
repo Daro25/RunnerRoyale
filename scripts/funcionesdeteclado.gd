@@ -50,3 +50,12 @@ func take_damage(amount: float):
 		emit_signal("died")
 		print("¡Vehículo destruido!")
 		queue_free()
+
+var Point :=0
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	print(body)
+	if not body is StaticBody3D and get_parent() .Point == 10:
+		$Control.visible = true
+		get_tree().paused = true
+		print ('fin')
+	pass # Replace with function body.

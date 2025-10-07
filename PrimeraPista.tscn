@@ -1,7 +1,8 @@
-[gd_scene load_steps=36 format=3 uid="uid://dlh7q8vqnmulb"]
+[gd_scene load_steps=41 format=3 uid="uid://dlh7q8vqnmulb"]
 
 [ext_resource type="Material" uid="uid://bj14rkvcmdkwv" path="res://pasto/pasto.tres" id="1_2pmvx"]
 [ext_resource type="ArrayMesh" uid="uid://c3fgcr2ttngrd" path="res://modelos/PrimerMapa.obj" id="1_4tq76"]
+[ext_resource type="Script" uid="uid://cnnuw2oabnjb1" path="res://primera_pista.gd" id="1_i1ly0"]
 [ext_resource type="Material" uid="uid://c5008jvk64w6t" path="res://paviment/paviment.tres" id="2_2pmvx"]
 [ext_resource type="ArrayMesh" uid="uid://c8nuc02pwy2gd" path="res://modelos/carreteraPMapa.obj" id="2_aob8a"]
 [ext_resource type="Material" uid="uid://couynhusrg5j3" path="res://cortesa/cortesa.tres" id="5_4jjbs"]
@@ -15,6 +16,8 @@
 [ext_resource type="Script" uid="uid://bouwhdvuu8r3f" path="res://scripts/propulsion.gd" id="12_f18ej"]
 [ext_resource type="Material" uid="uid://vc3y15wlhtu2" path="res://propulsores/Aceleración.tres" id="13_f18ej"]
 [ext_resource type="PlaneMesh" uid="uid://bf1vuruqnuyu2" path="res://modelos/plano.tres" id="14_hxhew"]
+[ext_resource type="Script" uid="uid://cnx2fnq20mw2o" path="res://meta.gd" id="16_r7lbv"]
+[ext_resource type="Script" uid="uid://sqcd365kovit" path="res://point.gd" id="17_i1ly0"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5jcn1"]
 points = PackedVector3Array(2.142939, 0.817904, -0.18033469, 2.4907212, 0.817904, 0.7478335, 2.7777913, 3.8496222, -0.25853574, 2.9661732, 3.8084178, -0.8913891, 2.4907212, 0.817904, -1.108503, 3.4188895, 0.817904, 1.0961151, 3.6162658, 3.8821216, 0.5759413, 3.0176408, 3.8333726, 0.35682857, 3.3649232, 5.6457877, 0.060764194, 3.3162036, 5.9812264, -0.33373857, 3.310707, 5.621413, -0.72074604, 3.6784768, 5.993414, -0.8284285, 3.5622995, 3.8612292, -1.1624691, 3.4188895, 0.817904, -1.456285, 4.3470573, 0.817904, 0.7478335, 4.057489, 5.675966, 0.019040346, 3.7381892, 6.017208, 0.08374977, 4.1954026, 3.8548453, 0.33209407, 3.749682, 6.746701, -0.39969718, 4.0212617, 5.664939, -0.79594886, 4.1701684, 3.8496222, -0.96559256, 4.3470573, 0.817904, -1.108503, 4.695339, 0.817904, -0.18033469, 4.400774, 3.8931482, -0.3279922, 4.100462, 6.029395, -0.41094017)
@@ -97,7 +100,13 @@ size = Vector3(3, 12, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_wc844"]
 
+[sub_resource type="SphereMesh" id="SphereMesh_wc844"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mn0ix"]
+size = Vector3(2, 2, 2)
+
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_i1ly0")
 
 [node name="Arbol" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.083607435, 0)
@@ -2155,6 +2164,7 @@ surface_material_override/0 = ExtResource("13_f18ej")
 
 [node name="meta" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.203644, 3.8146973e-06, 10.546242)
+script = ExtResource("16_r7lbv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="meta"]
 transform = Transform3D(0.99043494, 0, -0.13798043, 0.0063361875, 0.99894506, 0.045481674, 0.13783488, -0.045920912, 0.9893901, 40.216476, 9.385071, -8.728761)
@@ -2171,16 +2181,197 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.39644, 0, -5.824929)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="meta/Area3D"]
 transform = Transform3D(0.9917295, 0, -0.12834558, 0, 1, 0, 0.12834558, 0, 0.9917295, 0.059890747, 12.204857, -1.4829316)
 shape = SubResource("BoxShape3D_hxhew")
-debug_color = Color(0, 0.49895608, 0.57193583, 0.41960785)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="meta"]
 transform = Transform3D(0.9915968, 0, -0.12936673, 0, 1, 0, 0.12936673, 0, 0.9915968, 62.58789, 10.421089, -5.785106)
 shape = SubResource("BoxShape3D_i1ly0")
 debug_color = Color(2.5945482e-08, 0.021205148, 0.030008094, 0.41960785)
+debug_fill = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="meta/CollisionShape3D2"]
 transform = Transform3D(3, 0, 0, 0, 12, 0, 0, 0, 3, -0.075035095, 0, -0.057715416)
 mesh = SubResource("BoxMesh_wc844")
 
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 70
+
+[node name="Panel" type="Panel" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.5
+offset_top = -11.5
+offset_right = 55.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Mision Fallada"
+
+[node name="Point" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.655235, -10.406625, -95.53662)
+script = ExtResource("17_i1ly0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Point"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.785511, 5.3244104, 3.8760824)
+mesh = SubResource("SphereMesh_wc844")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Point"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.529848, 5.282085, 3.863822)
+shape = SubResource("BoxShape3D_mn0ix")
+debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
+
+[node name="Point3" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.383995, -10.406625, -73.94418)
+script = ExtResource("17_i1ly0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Point3"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.785511, 5.3244104, 3.8760824)
+mesh = SubResource("SphereMesh_wc844")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Point3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.529848, 5.282085, 3.863822)
+shape = SubResource("BoxShape3D_mn0ix")
+debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
+
+[node name="Point4" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.739056, -10.406625, -74.598495)
+script = ExtResource("17_i1ly0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Point4"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.785511, 5.3244104, 3.8760824)
+mesh = SubResource("SphereMesh_wc844")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Point4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.529848, 5.282085, 3.863822)
+shape = SubResource("BoxShape3D_mn0ix")
+debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
+
+[node name="Point5" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -113.29412, -10.406625, -41.882675)
+script = ExtResource("17_i1ly0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Point5"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.785511, 5.3244104, 3.8760824)
+mesh = SubResource("SphereMesh_wc844")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Point5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.529848, 5.282085, 3.863822)
+shape = SubResource("BoxShape3D_mn0ix")
+debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
+
+[node name="Point6" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -128.99768, -10.406625, 37.289654)
+script = ExtResource("17_i1ly0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Point6"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.785511, 5.3244104, 3.8760824)
+mesh = SubResource("SphereMesh_wc844")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Point6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.529848, 5.282085, 3.863822)
+shape = SubResource("BoxShape3D_mn0ix")
+debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
+
+[node name="Point7" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.133644, -10.406625, 98.79544)
+script = ExtResource("17_i1ly0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Point7"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.785511, 5.3244104, 3.8760824)
+mesh = SubResource("SphereMesh_wc844")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Point7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.529848, 5.282085, 3.863822)
+shape = SubResource("BoxShape3D_mn0ix")
+debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
+
+[node name="Point8" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.504528, -10.406625, 85.05478)
+script = ExtResource("17_i1ly0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Point8"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.785511, 5.3244104, 3.8760824)
+mesh = SubResource("SphereMesh_wc844")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Point8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.529848, 5.282085, 3.863822)
+shape = SubResource("BoxShape3D_mn0ix")
+debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
+
+[node name="Point9" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.42104, -10.406625, 87.01775)
+script = ExtResource("17_i1ly0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Point9"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.785511, 5.3244104, 3.8760824)
+mesh = SubResource("SphereMesh_wc844")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Point9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.529848, 5.282085, 3.863822)
+shape = SubResource("BoxShape3D_mn0ix")
+debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
+
+[node name="Point10" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.55817, -10.406626, 50.70291)
+script = ExtResource("17_i1ly0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Point10"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.785511, 5.3244104, 3.8760824)
+mesh = SubResource("SphereMesh_wc844")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Point10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.529848, 5.282085, 3.863822)
+shape = SubResource("BoxShape3D_mn0ix")
+debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
+
+[node name="Point2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.790855, -10.406625, -47.44278)
+script = ExtResource("17_i1ly0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Point2"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.785511, 5.3244104, 3.8760824)
+mesh = SubResource("SphereMesh_wc844")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Point2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.529848, 5.282085, 3.863822)
+shape = SubResource("BoxShape3D_mn0ix")
+debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
+
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
+[connection signal="body_entered" from="meta/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Point" to="Point" method="_on_body_entered"]
+[connection signal="body_entered" from="Point3" to="Point3" method="_on_body_entered"]
+[connection signal="body_entered" from="Point4" to="Point4" method="_on_body_entered"]
+[connection signal="body_entered" from="Point5" to="Point5" method="_on_body_entered"]
+[connection signal="body_entered" from="Point6" to="Point6" method="_on_body_entered"]
+[connection signal="body_entered" from="Point7" to="Point7" method="_on_body_entered"]
+[connection signal="body_entered" from="Point8" to="Point8" method="_on_body_entered"]
+[connection signal="body_entered" from="Point9" to="Point9" method="_on_body_entered"]
+[connection signal="body_entered" from="Point10" to="Point10" method="_on_body_entered"]
+[connection signal="body_entered" from="Point2" to="Point2" method="_on_body_entered"]
