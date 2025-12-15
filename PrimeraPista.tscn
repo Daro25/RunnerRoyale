@@ -1,8 +1,8 @@
-[gd_scene load_steps=43 format=3 uid="uid://dlh7q8vqnmulb"]
+[gd_scene load_steps=45 format=3 uid="uid://dlh7q8vqnmulb"]
 
 [ext_resource type="Material" uid="uid://bj14rkvcmdkwv" path="res://pasto/pasto.tres" id="1_2pmvx"]
 [ext_resource type="ArrayMesh" uid="uid://c3fgcr2ttngrd" path="res://modelos/PrimerMapa.obj" id="1_4tq76"]
-[ext_resource type="Script" uid="uid://cnnuw2oabnjb1" path="res://primera_pista.gd" id="1_i1ly0"]
+[ext_resource type="Script" path="res://primera_pista.gd" id="1_i1ly0"]
 [ext_resource type="Material" uid="uid://c5008jvk64w6t" path="res://paviment/paviment.tres" id="2_2pmvx"]
 [ext_resource type="ArrayMesh" uid="uid://c8nuc02pwy2gd" path="res://modelos/carreteraPMapa.obj" id="2_aob8a"]
 [ext_resource type="Material" uid="uid://couynhusrg5j3" path="res://cortesa/cortesa.tres" id="5_4jjbs"]
@@ -19,8 +19,10 @@
 [ext_resource type="PlaneMesh" uid="uid://bf1vuruqnuyu2" path="res://modelos/plano.tres" id="14_hxhew"]
 [ext_resource type="ArrayMesh" uid="uid://b6far7ntktdf0" path="res://modelos/lowpoly car.obj" id="14_xkier"]
 [ext_resource type="Material" uid="uid://bvqry1ri5fodi" path="res://modelos/llanta.tres" id="15_xkier"]
-[ext_resource type="Script" uid="uid://cnx2fnq20mw2o" path="res://meta.gd" id="16_r7lbv"]
-[ext_resource type="Script" uid="uid://sqcd365kovit" path="res://point.gd" id="17_i1ly0"]
+[ext_resource type="Script" path="res://meta.gd" id="16_r7lbv"]
+[ext_resource type="Script" path="res://point.gd" id="17_i1ly0"]
+[ext_resource type="PackedScene" uid="uid://bcsm3q7pr0603" path="res://juan_mecanico.tscn" id="22_xh4cl"]
+[ext_resource type="Script" uid="uid://bg21xbwxsvjok" path="res://Player.gd" id="23_3w8fs"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5jcn1"]
 points = PackedVector3Array(2.142939, 0.817904, -0.18033469, 2.4907212, 0.817904, 0.7478335, 2.7777913, 3.8496222, -0.25853574, 2.9661732, 3.8084178, -0.8913891, 2.4907212, 0.817904, -1.108503, 3.4188895, 0.817904, 1.0961151, 3.6162658, 3.8821216, 0.5759413, 3.0176408, 3.8333726, 0.35682857, 3.3649232, 5.6457877, 0.060764194, 3.3162036, 5.9812264, -0.33373857, 3.310707, 5.621413, -0.72074604, 3.6784768, 5.993414, -0.8284285, 3.5622995, 3.8612292, -1.1624691, 3.4188895, 0.817904, -1.456285, 4.3470573, 0.817904, 0.7478335, 4.057489, 5.675966, 0.019040346, 3.7381892, 6.017208, 0.08374977, 4.1954026, 3.8548453, 0.33209407, 3.749682, 6.746701, -0.39969718, 4.0212617, 5.664939, -0.79594886, 4.1701684, 3.8496222, -0.96559256, 4.3470573, 0.817904, -1.108503, 4.695339, 0.817904, -0.18033469, 4.400774, 3.8931482, -0.3279922, 4.100462, 6.029395, -0.41094017)
@@ -2145,10 +2147,6 @@ mesh = SubResource("CylinderMesh_3i3gk")
 offset_right = 257.0
 offset_bottom = 27.0
 
-[node name="Camera3D" type="Camera3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.3511537e-08, -0.09551566, 0.9954279, -4.175122e-09, 0.9954279, 0.09551566, -1, 0, -4.371139e-08, 6.414, 2.158, 0)
-current = true
-
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(0.91521245, 0.26864788, 0.30035758, -0.22468357, 0.9589387, -0.1730719, -0.33452004, 0.09091218, 0.93799335, -46.057373, -10.855201, 93.12922)
 script = ExtResource("12_f18ej")
@@ -2237,7 +2235,7 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 70
-text = "Mision Fallada"
+text = "Ganaste"
 
 [node name="Point" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.655235, 3.2415524, -99.49081)
@@ -2368,6 +2366,17 @@ mesh = SubResource("SphereMesh_wc844")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.529848, 5.282085, 3.863822)
 shape = SubResource("BoxShape3D_mn0ix")
 debug_color = Color(2.4065375e-08, 0.027460862, 0.038860776, 0.41960785)
+
+[node name="juanMecanico" parent="." instance=ExtResource("22_xh4cl")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 100.283134, 6.9959908, -81.99338)
+script = ExtResource("23_3w8fs")
+
+[node name="Node3D" type="Node3D" parent="juanMecanico"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2565308, 0)
+
+[node name="Camera3D" type="Camera3D" parent="juanMecanico/Node3D"]
+transform = Transform3D(-0.9959553, -0.00858212, 0.089439556, -4.1751225e-09, 0.9954279, 0.09551567, -0.08985036, 0.095129326, -0.99140173, 0.913208, 0.3110218, -7.002434)
+current = true
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

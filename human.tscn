@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk8t12lhe2s5x"]
+
+[ext_resource type="PackedScene" uid="uid://chhoolirqgqy0" path="res://modelos/Human.blend" id="1_11jcu"]
+
+[node name="Human" instance=ExtResource("1_11jcu")]

@@ -36,8 +36,10 @@ func _physics_process(delta: float) -> void:
 		$llantaDD.engine_force = 0
 		$llantaDI.engine_force = 0
 func _input (event):
+	#remolcado
 	if event.is_action_pressed("Remolcar"):
-		apply_torque_impulse(Vector3(14000,0,0))
+		apply_torque_impulse(Vector3(10000,0,0))
+		
 func take_damage(amount: float):
 	if current_health <= 0:
 		return
