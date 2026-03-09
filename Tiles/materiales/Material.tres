@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cmw503a0b6qft"]
+
+[ext_resource type="Texture2D" uid="uid://pe1tvwjg5jxm" path="res://Tiles/materiales/asfaltoLinea.jpg" id="1_jlnj8"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_jlnj8")

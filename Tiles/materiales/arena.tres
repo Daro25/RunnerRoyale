@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bgryyk0smwajl"]
+
+[resource]
+resource_name = "arena"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.83137256, 0.81960785, 0.3372549, 1)
+rim_enabled = true
+rim = 0.17
+rim_tint = 0.78

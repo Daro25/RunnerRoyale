@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cln0a2pnqotcy"]
+
+[resource]
+resource_name = "sierraAzul"
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.2627451, 0.4, 0.35686275, 1)

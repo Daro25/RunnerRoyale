@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c71qx014f2pjr"]
+
+[resource]
+resource_name = "terracota"
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.7647059, 0.3882353, 0.27058825, 1)

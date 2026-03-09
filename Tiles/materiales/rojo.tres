@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://did2dlccxmq5w"]
+
+[resource]
+resource_name = "rojo"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.90590245, 0, 0.09390011, 1)
+rim_enabled = true
+rim = 0.3
+rim_tint = 0.43

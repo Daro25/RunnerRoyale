@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://diaqdktlum7w3"]
+
+[resource]
+resource_name = "amarillo"
+cull_mode = 2
+albedo_color = Color(0.8946233, 0.9059144, 0.86347467, 1)
