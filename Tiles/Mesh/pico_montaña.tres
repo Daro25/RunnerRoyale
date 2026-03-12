@@ -1,0 +1,58 @@
+[gd_resource type="ArrayMesh" load_steps=4 format=4 uid="uid://ck6mp803vimwg"]
+
+[ext_resource type="Material" uid="uid://c3pvfnbh6r1pk" path="res://Tiles/materiales/contorno.001.tres" id="1_u6hc1"]
+[ext_resource type="Material" uid="uid://c71qx014f2pjr" path="res://Tiles/materiales/terracota.tres" id="2_g4gsv"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tk7mr"]
+_surfaces = [{
+"aabb": AABB(-1, -2, -1.5, 2, 4, 3),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAAACAAMABAABAAMAAgAEAAMABAAFAAEAAgABAAUAAgAGAAQAAgAFAAcABgACAAcA"),
+"name": "contorno",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAB/Jv9/AABnm86a/38AAPCkfyY3MwAA8KR/JsfMAAD//wAA//8AAP//////fwAA//8AAP9/AAD//wAAAAAAAA==")
+}, {
+"aabb": AABB(-0.8779866, -1.957414, -1.4510956, 1.9113088, 3.8764606, 2.9021912),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAAADAAEABAADAAIABQADAAQABQABAAMABAACAAYAAQAGAAIAAQAFAAcAAQAHAAYA"),
+"name": "terracota",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AACOKP9/AACpoOUnjzYAAHOWwJf/fwAAqaDlJ2/JAACr/wAA//8AABn91gD/fwAA//////9/AACr/wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "Relieves_Cube_005"
+_surfaces = [{
+"aabb": AABB(-1, -2, -1.5, 2, 4, 3),
+"attribute_data": PackedByteArray("3GaQ3NKOrcH5fOu3R22ol/+f/3//X/9/A4yomv9f/z8DjFYlR21WKP+f/z/cZpDc+Xzrt/l8lvn/X/9f+Xzrt/9f/3//X/8/R21WKPl8lvnSjufm3Gb/3w=="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUAAwAGAAQABwAIAAkABwAKAAgACwAMAA0ADgAPABAADwAOABEADwARABIAEwAUABUA"),
+"material": ExtResource("1_u6hc1"),
+"name": "contorno",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("AAB/Jv9/fTxnm86a/399PPCkfyY3M3088KR/Jjcz/jf//////396N///AAAAACE4Z5vOmv9/ETf//wAA//99Gmebzpr/f3Ea8KR/JsfMhhr//////39vGgAAfyb/fxDA8KR/JjczEMDwpH8mx8wQwP//AAD/fzLv8KR/Jjcz7fT//wAAAAAy7///AAD//wfo8KR/JsfMyNfwpH8mx8woGmebzpr/fygaAAB/Jv9/KBrHCGMoxwhjKMcIYyg7B7wl8waxJU0HvyW6Bqkl9UCwOUdAHjqKQVE5JEA1Omn2yoRp9sqEafbKhOStwJ3RqY2h5K3AnT45bhDit1ICRC7qRUQu6kVELupF")
+}, {
+"aabb": AABB(-0.8779866, -1.957414, -1.4510956, 1.9113088, 3.8764606, 2.9021912),
+"attribute_data": PackedByteArray("3GaQ3Pl867fSjq3BR22ol/+f/38DjKia/1//f/9f/z8DjFYl/5//P0dtVijcZpDc+XyW+fl867f5fOu3/1//X/9f/39HbVYo/1//P/l8lvncZv/f0o7n5g=="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUAAwAGAAQABwAIAAkABwAKAAgACwAMAA0ADgAPABAADwAOABEADwARABIAEwAUABUA"),
+"material": ExtResource("2_g4gsv"),
+"name": "terracota",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("AACOKP9/ceSpoOUnjzZx5HOWwJf/f3HkqaDlJ482ceX//////39o5XOWwJf/f2Hlq/8AAAAAdOWr/wAA//+wyHOWwJf/fxXI//////9/8sepoOUnb8lCyQAAjij/f/I/qaDlJ2/J8j+poOUnjzbyP6mg5SePNucqGf3WAP9/8Rir/wAAAACHM6mg5SdvyTcDq/8AAP//HgqpoOUnb8mRtgAAjij/f5G2c5bAl/9/kbZHxEfCR8RHwkfER8LUvwjGWb9Xxu2+m8b3v/LFwvhN2m74Qdpb+D/aEflY2kIFh4lCBYeJQgWHiYpHC/ofxibwwkQO7JfVp9+hVgxeke5v1pHub9aR7m/W")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_tk7mr")

@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=4 uid="uid://cb8jojittj411"]
+
+[ext_resource type="Material" uid="uid://c7pib4pcm8mpy" path="res://Tiles/materiales/montañas_ilusion.tres" id="1_s0ylu"]
+[ext_resource type="Texture2D" uid="uid://cswskpl10olet" path="res://Tiles/materiales/montañas.png" id="2_0i322"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41wmc"]
+resource_name = "Material.001"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_0i322")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p4idu"]
+_surfaces = [{
+"aabb": AABB(-300, -50, -300, 600, 100, 600),
+"format": 34896613377,
+"index_count": 192,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEAAgADAAUABgAEAAAABQADAAcABgAIAAQABQAHAAkACgAIAAYACQAHAAsACgAMAAgACQALAA0ADgAMAAoADQALAA8ADgAQAAwADQAPABEAEgAQAA4AEQAPABMAEgAUABAAEQATABUAFgAUABIAFQATABcAFgAYABQAFQAXABkAGgAYABYAGQAXABsAGgAcABgAGQAbAB0AHgAcABoAHQAbAB8AHgAgABwAHQAfACEAIgAgAB4AIQAfACMAIgAkACAAIQAjACUAJgAkACIAJQAjACcAJgAoACQAJQAnACkAKgAoACYAKQAnACsAKgAsACgAKQArAC0ALgAsACoALQArAC8ALgAwACwALQAvADEAMgAwAC4AMQAvADMAMgA0ADAAMQAzADUANgA0ADIANQAzADcANgA4ADQANQA3ADkAOgA4ADYAOQA3ADsAOgA8ADgAOQA7AD0APgA8ADoAPQA7AD8APgA/ADwAPQA/AD4A"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 64,
+"vertex_data": PackedByteArray("/38AAAAAAAD4mP//dQIAAPiYAAB1AgAA+7D//74JAAD/f///AAAAAPuwAAC+CQAABmcAAHUCAAAcx///khUAAAZn//91AgAAHMcAAJIVAAADTwAAvgkAAIHa//99JQAAA0///74JAACB2gAAfSUAAOI4AACSFQAAbOr//+I4AADiOP//khUAAGzqAADiOAAAfSUAAH0lAABA9v//A08AAH0l//99JQAAQPYAAANPAACSFQAA4jgAAIn9//8GZwAAkhX//+I4AACJ/QAABmcAAL4JAAADTwAA//////9/AAC+Cf//A08AAP//AAD/fwAAdQIAAAZnAACJ/f//+JgAAHUC//8GZwAAif0AAPiYAAAAAAAA/38AAED2///7sAAAAAD///9/AABA9gAA+7AAAHUCAAD4mAAAbOr//xzHAAB1Av//+JgAAGzqAAAcxwAAvgkAAPuwAACB2v//gdoAAL4J///7sAAAgdoAAIHaAACSFQAAHMcAABzH//9s6gAAkhX//xzHAAAcxwAAbOoAAH0lAACB2gAA+7D//0D2AAB9Jf//gdoAAPuwAABA9gAA4jgAAGzqAAD4mP//if0AAOI4//9s6gAA+JgAAIn9AAADTwAAQPYAAP9//////wAAA0///0D2AAD/fwAA//8AAAZnAACJ/QAABmf//4n9AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7dw3w"]
+resource_name = "montañasIlusion_Cylinder"
+_surfaces = [{
+"aabb": AABB(-300, -50, -300, 600, 100, 600),
+"attribute_data": PackedByteArray("/////1T5G5VU+f////8blanyG5Wp8v///+sblf/r//9U5RuVVOX//6neG5Wp3v///9cblf/X//9U0RuVVNH//6nKG5Wpyv///8Mblf/D//9UvRuVVL3//6m2G5Wptv///68blf+v//9UqRuVVKn//6miG5Wpov///5sblf+b//9UlRuVVJX//6mOG5Wpjv///4cblf+H//9UgRuVVIH//6l6G5Wpev///3Mblf9z//9UbRuVVG3//6lmG5WpZv///18blf9f//9UWRuVVFn//6lSG5WpUv///0sblf9L//9URRuVVEX//6o+G5WqPv///zcblf83//9UMRuVVDH//6oqG5WqKv//"),
+"format": 34896613399,
+"index_count": 192,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQAAgAEAAUABQAEAAYABQAGAAcABwAGAAgABwAIAAkACQAIAAoACQAKAAsACwAKAAwACwAMAA0ADQAMAA4ADQAOAA8ADwAOABAADwAQABEAEQAQABIAEQASABMAEwASABQAEwAUABUAFQAUABYAFQAWABcAFwAWABgAFwAYABkAGQAYABoAGQAaABsAGwAaABwAGwAcAB0AHQAcAB4AHQAeAB8AHwAeACAAHwAgACEAIQAgACIAIQAiACMAIwAiACQAIwAkACUAJQAkACYAJQAmACcAJwAmACgAJwAoACkAKQAoACoAKQAqACsAKwAqACwAKwAsAC0ALQAsAC4ALQAuAC8ALwAuADAALwAwADEAMQAwADIAMQAyADMAMwAyADQAMwA0ADUANQA0ADYANQA2ADcANwA2ADgANwA4ADkAOQA4ADoAOQA6ADsAOwA6ADwAOwA8AD0APQA8AD4APQA+AD8APwA+AEAAPwBAAEEA"),
+"material": SubResource("StandardMaterial3D_41wmc"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(6.000237, 1.9572389, 0, 0),
+"vertex_count": 66,
+"vertex_data": PackedByteArray("/38AAAAAAAD4mP//dQIAAPiYAAB1AgAA/3///wAAAAD7sP//vgkAAPuwAAC+CQAAHMf//5IVAAAcxwAAkhUAAIHa//99JQAAgdoAAH0lAABs6v//4jgAAGzqAADiOAAAQPb//wNPAABA9gAAA08AAIn9//8GZwAAif0AAAZnAAD//////38AAP//AAD/fwAAif3///iYAACJ/QAA+JgAAED2///7sAAAQPYAAPuwAABs6v//HMcAAGzqAAAcxwAAgdr//4HaAACB2gAAgdoAABzH//9s6gAAHMcAAGzqAAD7sP//QPYAAPuwAABA9gAA+Jj//4n9AAD4mAAAif0AAP9//////wAA/38AAP//AAAGZ///if0AAAZnAACJ/QAAA0///0D2AAADTwAAQPYAAOI4//9s6gAA4jgAAGzqAAB9Jf//gdoAAH0lAACB2gAAkhX//xzHAACSFQAAHMcAAL4J///7sAAAvgkAAPuwAAB1Av//+JgAAHUCAAD4mAAAAAD///9/AAAAAAAA/38AAHUC//8GZwAAdQIAAAZnAAC+Cf//A08AAL4JAAADTwAAkhX//+I4AACSFQAA4jgAAH0l//99JQAAfSUAAH0lAADiOP//khUAAOI4AACSFQAAA0///74JAAADTwAAvgkAAAZn//91AgAABmcAAHUCAAD/f///AAAAAP9/AAAAAAAA/3//f4V0/3+FdP9//3//f8Jq/3/Cav9/NGL/fzRi/3+CWv9/glr/f2lT/39pU/9/ukz/f7pM/39NRv9/TUb/f/8//3//P/9///+xuf//sbn//0Sz//9Es///laz//5Ws//98pf//fKX//8qd///Knf//PJX//zyV//95i///eYv///9/////f4T0/3+E9P9/wur/f8Lq/3804v9/NOL/f4Ha/3+B2v9/adP/f2nT/3+6zP9/usz/f0zG/39Mxv9//7//f/+//3+xuf9/sbn/f0Sz/39Es/9/laz/f5Ws/398pf9/fKX/f8qd/3/Knf9/PJX/fzyV/395i/9/eYv/f/9//3//f/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_p4idu")
+
+[node name="montañasIlusion" type="MeshInstance3D"]
+material_override = ExtResource("1_s0ylu")
+mesh = SubResource("ArrayMesh_7dw3w")
+skeleton = NodePath("")

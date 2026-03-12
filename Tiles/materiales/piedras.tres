@@ -5,5 +5,6 @@
 [resource]
 resource_name = "piedras"
 cull_mode = 2
+diffuse_mode = 3
 albedo_texture = ExtResource("1_i71uv")
 roughness = 0.8

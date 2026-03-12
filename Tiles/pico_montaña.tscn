@@ -1,88 +1,15 @@
-[gd_scene load_steps=9 format=4 uid="uid://ipdr0iakadwi"]
+[gd_scene load_steps=3 format=3 uid="uid://ipdr0iakadwi"]
 
-[ext_resource type="Material" uid="uid://c3pvfnbh6r1pk" path="res://Tiles/materiales/contorno.001.tres" id="1_xxbo8"]
-[ext_resource type="Material" uid="uid://c71qx014f2pjr" path="res://Tiles/materiales/terracota.tres" id="2_hltqy"]
+[ext_resource type="ArrayMesh" uid="uid://ck6mp803vimwg" path="res://Tiles/Mesh/pico_montaña.tres" id="2_3y7y8"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_op4a6"]
-resource_name = "contorno"
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ce612"]
+points = PackedVector3Array(0.49189565, -0.4442953, -0.76939386, 1.0634921, -1.8412201, 1.5155748, 0.9363339, -1.8412201, 1.5155748, 0.9363339, 2.0317461, 0.05529461, -1.0317461, -1.3332837, 0.05529461, 1.0634921, -2.0317461, -1.5314478, 1.0634921, 2.0317461, -0.071167566, -1.0317461, -1.4601684, -0.071167566, 0.9363339, -2.0317461, 1.5155748, 0.11103647, -1.3332837, 0.8805796, 0.8729599, -1.777579, -1.4679184, 0.9363339, 2.0317461, -0.071167566, -0.7774298, -1.3332837, -0.2617556, 0.9363339, -2.0317461, -1.5314478, 0.17441046, -1.2696425, -0.89645255, 0.9363339, 1.9044636, 0.11882396, -0.96796197, -1.3332837, 0.11882396, -1.0317461, -1.3332837, -0.071167566, 1.0634921, -2.0317461, 1.5155748, 1.0634921, 1.9044636, 0.11882396, 1.0634921, -1.5238096, -1.404389, 0.42852166, -1.5238096, 1.1343987, -1.0317461, -1.4601684, 0.05529461, 0.8093808, -1.8412201, 1.4520454, 0.9363339, -1.6506943, 1.4520454, 0.3015686, -1.3965272, -1.0235112, -0.5235237, -1.3332837, 0.43617243, 0.9363339, -1.5238096, -1.404389, 0.8729599, 1.777579, -0.13469692, -0.96796197, -1.2060012, 0.05529461, 0.9363339, -1.9044636, -1.5314478, -0.96796197, -1.4601684, 0.11882396)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_xxs8a"]
-_surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2),
-"format": 34896613377,
-"index_count": 30,
-"index_data": PackedByteArray("AAABAAIAAwABAAAAAAACAAMABAABAAMAAgAEAAMABAAFAAEAAgABAAUAAgAGAAQAAgAFAAcABgACAAcA"),
-"name": "contorno",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAB/Jv9/AABnm86a/38AAPCkfyY3MwAA8KR/JsfMAAD//wAA//8AAP//////fwAA//8AAP9/AAD//wAAAAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_mn0gs"]
-resource_name = "Relieves_Cube_005"
-_surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2),
-"attribute_data": PackedByteArray("3GaQ3NKOrcH5fOu3R22ol/+f/3//X/9/A4yomv9f/z8DjFYlR21WKP+f/z/cZpDc+Xzrt/l8lvn/X/9f+Xzrt/9f/3//X/8/R21WKPl8lvnSjufm3Gb/3w=="),
-"format": 34896613399,
-"index_count": 30,
-"index_data": PackedByteArray("AAABAAIAAwAEAAUAAwAGAAQABwAIAAkABwAKAAgACwAMAA0ADgAPABAADwAOABEADwARABIAEwAUABUA"),
-"material": SubResource("StandardMaterial3D_op4a6"),
-"name": "contorno",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 22,
-"vertex_data": PackedByteArray("AAB/Jv9/7kFnm86a/3/uQfCkfyY3M+5B8KR/JjczDTn//////3/XOP//AAAAADI5Z5vOmv9/jjj//wAA//+OGGebzpr/f5EY8KR/JsfMiRj//////3+TGAAAfyb/fwbA8KR/JjczBsDwpH8mx8wGwP//AAD/f47o8KR/JjczhPD//wAAAACO6P//AAD//8r18KR/JsfMPuLwpH8mx8xCGmebzpr/f0IaAAB/Jv9/Qhp+AnHUfgJx1H4CcdQoBYjbPwWi2xgFdtteBcbb7EQJP6pEND9URcY+gkRNP2/5R4Nv+UeDb/lHg+WnxaWRoViq5afFpUM58gwDwFMI3iVkU94lZFPeJWRT")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_xxs8a")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ldxdp"]
-resource_name = "terracota"
-cull_mode = 2
-shading_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_r4pqq"]
-_surfaces = [{
-"aabb": AABB(-0.8779866, -0.978707, -0.9673971, 1.9113088, 1.9382303, 1.9347942),
-"format": 34896613377,
-"index_count": 30,
-"index_data": PackedByteArray("AAABAAIAAwAAAAIAAAADAAEABAADAAIABQADAAQABQABAAMABAACAAYAAQAGAAIAAQAFAAcAAQAHAAYA"),
-"name": "terracota",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AACOKP9/AACpoOUnjzYAAHOWwJf/fwAAqaDlJ2/JAACr/wAA//8AABn91gD/fwAA//////9/AACr/wAAAAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_kkjwi"]
-resource_name = "Relieves_Cube_014"
-_surfaces = [{
-"aabb": AABB(-0.8779866, -0.978707, -0.9673971, 1.9113088, 1.9382303, 1.9347942),
-"attribute_data": PackedByteArray("3GaQ3Pl867fSjq3BR22ol/+f/38DjKia/1//f/9f/z8DjFYl/5//P0dtVijcZpDc+XyW+fl867f5fOu3/1//X/9f/39HbVYo/1//P/l8lvncZv/f0o7n5g=="),
-"format": 34896613399,
-"index_count": 30,
-"index_data": PackedByteArray("AAABAAIAAwAEAAUAAwAGAAQABwAIAAkABwAKAAgACwAMAA0ADgAPABAADwAOABEADwARABIAEwAUABUA"),
-"material": SubResource("StandardMaterial3D_ldxdp"),
-"name": "terracota",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 22,
-"vertex_data": PackedByteArray("AACOKP9/YeWpoOUnjzZh5XOWwJf/f2HlqaDlJ482X+f//////39h53OWwJf/f2Xnq/8AAAAAXeer/wAA//83x3OWwJf/f/rG//////9/0capoOUnb8mlxwAAjij/f/k/qaDlJ2/J+T+poOUnjzb5P6mg5SePNvYfGf3WAP9/ww+r/wAAAACNK6mg5SdvyY4Bq/8AAP//+Q+poOUnb8lbqwAAjij/f1urc5bAl/9/W6tZxNm5WcTZuVnE2blyu/DAQLsPwfS6QcGZu9fAE/t/JC37nCQ/+7Ak5PpJJIQDhYaEA4WGhAOFhk4/UPUJwxz40Dob5wJpAE7hXRNWovQpzKL0Kcyi9CnM")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_r4pqq")
-
-[node name="picoMontaña" type="Node3D"]
-
-[node name="picoMontaña" type="MeshInstance3D" parent="."]
-material_override = ExtResource("1_xxbo8")
-mesh = SubResource("ArrayMesh_mn0gs")
+[node name="picoMontaña" type="MeshInstance3D"]
+mesh = ExtResource("2_3y7y8")
 skeleton = NodePath("")
 
-[node name="picoMontaña_001" type="MeshInstance3D" parent="."]
-material_override = ExtResource("2_hltqy")
-mesh = SubResource("ArrayMesh_kkjwi")
-skeleton = NodePath("")
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ce612")

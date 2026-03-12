@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bh08t2dqpl5fs"]
+
+[ext_resource type="Shader" uid="uid://dph5oskvv1fs7" path="res://sky.gdshader" id="1_ykwot"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5jcn1"]
+shader = ExtResource("1_ykwot")
+shader_parameter/Exponer = 1.70000002533204
+shader_parameter/TonoMapa = 0.766000036385
+shader_parameter/NivelContraste = 0.0
+shader_parameter/ColorFondo = Vector4(0.3, 0.3, 0.3, 0)
+shader_parameter/_OscuridadAtmosfera = 0.450000021375
+shader_parameter/_ItensidadSol = 49.0000004321348
+shader_parameter/_EspesorAtmosfera = 1.20000001043084
+shader_parameter/_ColorDiaAtmosfera = Vector4(1, 1, 1, 1)
+shader_parameter/_ColorNocheAtmosfera = Vector4(0.02, 0.03, 0.04, 1)
+shader_parameter/_ColorHorizonte = Vector4(0.980392, 0.635294, 0.462745, 1)
+shader_parameter/_AtmosferaParametros = Vector3(1, 0, 0)
+shader_parameter/_SolTamanio = 0.01
+shader_parameter/_SolIntensidad = 1.90000002831228
+shader_parameter/_SolBrillo = 0.99999988079071
+shader_parameter/_SolColor = Vector4(1, 1, 1, 1)
+shader_parameter/sol_color_disco = Vector4(0.99, 0.49, 0.22, 1)
+shader_parameter/sol_intensidad_disco = 1.3
+shader_parameter/sol_tamanio_disco = 0.009
+
+[sub_resource type="Sky" id="Sky_reio3"]
+sky_material = SubResource("ShaderMaterial_5jcn1")
+
+[sub_resource type="Environment" id="Environment_23qqr"]
+background_mode = 2
+background_energy_multiplier = 0.76
+sky = SubResource("Sky_reio3")
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_23qqr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.31571525, 0.94885397, 0, -0.94885397, 0.31571525, 0, 25.83574, 0)

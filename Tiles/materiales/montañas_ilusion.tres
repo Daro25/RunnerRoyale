@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c7pib4pcm8mpy"]
+
+[ext_resource type="Texture2D" uid="uid://cswskpl10olet" path="res://Tiles/materiales/montañas.png" id="1_s4pye"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_s4pye")
+metallic_specular = 0.0
+roughness = 0.0
+emission = Color(0.011071604, 0.020781474, 0.0019158949, 1)
+emission_operator = 1
+rim = 0.0
+rim_tint = 0.0
+uv1_scale = Vector3(2, 1, 2)
+use_z_clip_scale = true
+stencil_flags = 2

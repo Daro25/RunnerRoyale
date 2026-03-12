@@ -1,0 +1,46 @@
+[gd_scene load_steps=15 format=3 uid="uid://bfpqgirjyt1ft"]
+
+[ext_resource type="PackedScene" uid="uid://dw3l7tmynyk6k" path="res://Tiles/camino_curva.tscn" id="1_j5c01"]
+[ext_resource type="PackedScene" uid="uid://sr1gqhwswj76" path="res://Tiles/camino_line.tscn" id="2_8uspk"]
+[ext_resource type="PackedScene" uid="uid://ctekm3gj2egl7" path="res://Tiles/carretera_curva.tscn" id="3_n86fc"]
+[ext_resource type="PackedScene" uid="uid://col3ay8g6ojbk" path="res://Tiles/carretera_line.tscn" id="4_6wdx2"]
+[ext_resource type="PackedScene" uid="uid://cncgaefud44f4" path="res://Tiles/colina.tscn" id="6_yc1kg"]
+[ext_resource type="PackedScene" uid="uid://coha0p1rxuk80" path="res://Tiles/cubePiedra.tscn" id="7_r65bo"]
+[ext_resource type="PackedScene" uid="uid://bdntct4x526sa" path="res://Tiles/meseta.tscn" id="8_2irq5"]
+[ext_resource type="PackedScene" uid="uid://dkhqungn0ktcl" path="res://Tiles/montaña.tscn" id="9_sfitv"]
+[ext_resource type="PackedScene" uid="uid://72nkdggl1wbu" path="res://Tiles/pasto.tscn" id="11_nxl5n"]
+[ext_resource type="PackedScene" uid="uid://ipdr0iakadwi" path="res://Tiles/pico_montaña.tscn" id="12_ghtw5"]
+[ext_resource type="PackedScene" uid="uid://kmrua0kl7ocu" path="res://Tiles/puente_piedra.tscn" id="13_jwwe3"]
+[ext_resource type="PackedScene" uid="uid://br6dvb61ourwv" path="res://Tiles/rampa_piedra.tscn" id="14_qjitw"]
+[ext_resource type="PackedScene" uid="uid://popojy6axw4p" path="res://Tiles/sierra.tscn" id="15_mix8h"]
+[ext_resource type="PackedScene" uid="uid://c4okdlmgmig8l" path="res://Tiles/tunel_piedra.tscn" id="16_1trdb"]
+
+[node name="Tiles" type="Node3D"]
+
+[node name="caminoCurva" parent="." instance=ExtResource("1_j5c01")]
+
+[node name="caminoLine" parent="." instance=ExtResource("2_8uspk")]
+
+[node name="carreteraCurva" parent="." instance=ExtResource("3_n86fc")]
+
+[node name="carreteraLine" parent="." instance=ExtResource("4_6wdx2")]
+
+[node name="colina" parent="." instance=ExtResource("6_yc1kg")]
+
+[node name="cubePiedra" parent="." instance=ExtResource("7_r65bo")]
+
+[node name="meseta" parent="." instance=ExtResource("8_2irq5")]
+
+[node name="montaña" parent="." instance=ExtResource("9_sfitv")]
+
+[node name="pasto" parent="." instance=ExtResource("11_nxl5n")]
+
+[node name="picoMontaña" parent="." instance=ExtResource("12_ghtw5")]
+
+[node name="puentePiedra" parent="." instance=ExtResource("13_jwwe3")]
+
+[node name="rampaPiedra" parent="." instance=ExtResource("14_qjitw")]
+
+[node name="sierra" parent="." instance=ExtResource("15_mix8h")]
+
+[node name="tunelPiedra" parent="." instance=ExtResource("16_1trdb")]

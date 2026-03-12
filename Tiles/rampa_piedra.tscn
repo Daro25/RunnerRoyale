@@ -1,54 +1,12 @@
-[gd_scene load_steps=6 format=4 uid="uid://br6dvb61ourwv"]
+[gd_scene load_steps=3 format=3 uid="uid://br6dvb61ourwv"]
 
-[ext_resource type="Material" uid="uid://dghtn4awguuum" path="res://Tiles/materiales/piedras.tres" id="1_k0ls0"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0g4d"]
-resource_name = "piedras"
-cull_mode = 2
-roughness = 0.8
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_ha6id"]
-_surfaces = [{
-"aabb": AABB(-6, -0.6666666, -1.9999999, 12, 2, 6),
-"format": 34896613377,
-"index_count": 84,
-"index_data": PackedByteArray("DAAEAA0ADQAEAAUABQAEAAEADAABAAQADgAFAAEADQAFAA4ADgABAAwADAANAAMAAAANAA4AAAAOAAwAAAADAA0ADAADAAIAAAACAAMAAAAMAAIADwAIAAYACQAGAAgAEAAGAAkAEAAPAAYAEQAJAAgAEQAQAAkADwARAAgACgAQABEACgAPABAADwAHABEACgARAAcADwALAAcACgAHAAsACgALAA8A"),
-"lods": [0.082897484, PackedByteArray("AAABAAIAAQADAAIAAAACAAMAAQAEAAMAAAADAAQABQAEAAEABAAFAAAAAAAFAAEABgAHAAgABwAJAAgACQAGAAgABwAKAAkACgAGAAkABgALAAcACgAHAAsACgALAAYA")],
-"name": "piedras",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 18,
-"vertex_data": PackedByteArray("EQFmBiICAADS/pX3BQIAACwBlfcFAgAAvwIhBIL3AAA//SEEgvcAAO3+ZgYiAgAA/////wAAAAAAAAAA//8AAP//AAD//wAA//8AAAAAAAAAAAAAAAAAAAAA//8AAAAA/38d9yICAAD/f2YG2fIAAP9/ZgYiAgAA/3///wAAAAD/fwAAAAAAAP9/AAD//wAA")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_jwph8"]
-resource_name = "cityTiles_Cube_001"
-_surfaces = [{
-"aabb": AABB(-6, -0.6666666, -1.9999999, 12, 2, 6),
-"attribute_data": PackedByteArray("qqqrqgCA//8AgKuqqqr/////fqUAgP7/AIB+pf///v+qqquqAICrqqqqAoD/hwDA/4cAoACoAKAAqADAqqpV1aqq//8AgFXV//9+pQCA/v////7/AIB+paqqq6oAgKuqAID//6qq//+qqquqqqoCgACAq6qqqlXVAIBV1aqq////hwCgAKgAwACoAKD/hwDA/79+pf+//v8AgFXVqqpV1f+/fqX/v/7/AJgAoACYAMAAmACgAJgAwKqqVdUAgFXV/79+pf+//v8AgFXVqqpV1QCYAKAAmADA"),
-"format": 34896613399,
-"index_count": 84,
-"index_data": PackedByteArray("JAAHACUAJAAEAAcAAAAmAAIAAAAnACYAKAAFAAYAKAApAAUACAAJAAoACwAqACsACwAMACoADwAQABEALAAOAC0ALAANAA4ALgABAC8ALgADAAEAMAAUABIAMAAxABQAMAATADEAMAAVABMAFgAyADMAFgAXADIAMwAyABgAMwAYABkAGgAbABwAIwA0ACAAIwA1ADQANAA1ACEANAAhACIAHQAeAB8A"),
-"lods": [0.082897484, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACwAMAA0ADQAOAAsADwAQABEAEgATABQAEgAVABMAFgAXABgAFgAYABkAGgAbABwAHQAeAB8AIAAhACIAIAAjACEA")],
-"material": SubResource("StandardMaterial3D_w0g4d"),
-"name": "piedras",
-"primitive": 3,
-"uv_scale": Vector4(3.9994957, 1.9998366, 0, 0),
-"vertex_count": 54,
-"vertex_data": PackedByteArray("EQFmBiIC+//S/pX3BQL4/ywBlfcFAvv/7f5mBiIC+P/S/pX3BQLwsr8CIQSC9/GyLAGV9wUC8LI//SEEgvfxshEBZgYiAgrVLAGV9wUCCtW/AiEEgvcK1REBZgYiAhDAvwIhBIL3EMA//SEEgvcQwO3+ZgYiAhDA7f5mBiIC+tQ//SEEgvf61NL+lfcFAvrU/////wAA5DIAAAAA///kMv//AAD//+QyAAD//wAA5DIAAAAAAAD/PwAA//8AAP8//////wAA/z///wAAAAD/PwAAAAAAAKoqAAAAAP//qioAAP//AACqKv//AAAAAKoq/////wAAqir//wAA//+qKgAAAAD///8///8AAAAA/z///wAA////PwAAAAAAAP8//38d9yIC8bL/f2YG2fLxsv9/HfciAvv//39mBiIC+///fx33IgLxsv9/ZgbZ8vGy/39mBtnyEMD/f2YGIgIPwP9/ZgbZ8hDA/39mBiICD8D/f2YGIgL4//9/HfciAvj//3///wAA5DL/fwAA///kMv9///8AAP8//38AAAAA/z//fwAA////P/9/AAAAAP8/FUAcwO8/878aQCLA7D/wv+H/RYBG/5h+uP/if5j+t4CfVYuqn1WLqp9Vi6o0AUx/VgK8fkMBVYKyADOBkKqaVZCqmlWQqppVAAD/fwAA/38AAP9/AAD/f/9//3//f/9//3//f/9//3+qqlRVqqpUVaqqVFVUVaqqVFWqqlRVqqr///9/////f////3////9/of60gC79T4EBQAjA+z8DwEn/oX6u/i59JwFTfxgAzn+sACeBMQAYgPo//r/9PwHAAAD/fwAA/3//f/9//3//f////3////9/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_ha6id")
+[ext_resource type="ArrayMesh" uid="uid://d33d6phprtwpy" path="res://Tiles/Mesh/rampa_piedra.tres" id="2_jwph8"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k0ls0"]
 points = PackedVector3Array(6.094045, -0.1901739, 3.238021, -5.5873027, -0.6667, -1.833898, -6.094045, 1.5235524, -2.0952382, -6.094045, -0.5711262, 4.1904764, 5.5873027, -0.6667, -1.833898, 6.094045, 1.5235524, -2.0952382, 5.5873027, -0.6667, 3.929136, -6.094045, 1.5235524, -1.904501, -5.5873027, -0.6667, 3.929136, -6.094045, -0.3807619, 3.809002, 6.094045, -0.5711262, 4.1904764, 6.094045, 1.5235524, -1.904501, 6.094045, -0.3807619, 3.809002, -6.094045, -0.1901739, 3.238021)
 
-[node name="rampaPiedra" type="Node3D"]
-
-[node name="rampaPiedra" type="MeshInstance3D" parent="."]
-material_override = ExtResource("1_k0ls0")
-mesh = SubResource("ArrayMesh_jwph8")
+[node name="rampaPiedra" type="MeshInstance3D"]
+mesh = ExtResource("2_jwph8")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

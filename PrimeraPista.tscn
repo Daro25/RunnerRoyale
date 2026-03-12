@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dlh7q8vqnmulb"]
+[gd_scene load_steps=43 format=3 uid="uid://dlh7q8vqnmulb"]
 
 [ext_resource type="Material" uid="uid://bj14rkvcmdkwv" path="res://pasto/pasto.tres" id="1_2pmvx"]
 [ext_resource type="ArrayMesh" uid="uid://c3fgcr2ttngrd" path="res://modelos/PrimerMapa.obj" id="1_4tq76"]
@@ -6,10 +6,10 @@
 [ext_resource type="Material" uid="uid://c5008jvk64w6t" path="res://paviment/paviment.tres" id="2_2pmvx"]
 [ext_resource type="ArrayMesh" uid="uid://c8nuc02pwy2gd" path="res://modelos/carreteraPMapa.obj" id="2_aob8a"]
 [ext_resource type="Material" uid="uid://couynhusrg5j3" path="res://cortesa/cortesa.tres" id="5_4jjbs"]
+[ext_resource type="PackedScene" uid="uid://bh08t2dqpl5fs" path="res://Tiles/cieloLuz.tscn" id="6_7ydog"]
 [ext_resource type="ArrayMesh" uid="uid://b8bwpg3a2d0af" path="res://modelos/arbolAdriantronco.obj" id="6_lac0w"]
 [ext_resource type="ArrayMesh" uid="uid://bmtgroml4rkbj" path="res://modelos/arbolAdrianhojas.obj" id="7_4n084"]
 [ext_resource type="Material" uid="uid://d0d71kwnhjkvd" path="res://hojas/hojas.tres" id="7_lac0w"]
-[ext_resource type="Shader" uid="uid://dph5oskvv1fs7" path="res://sky.gdshader" id="9_4n084"]
 [ext_resource type="Script" uid="uid://baaufandy3r82" path="res://scripts/funcionesdeteclado.gd" id="10_5jcn1"]
 [ext_resource type="PhysicsMaterial" uid="uid://ci52lwixy1pi3" path="res://PrimeraPista_Fisica.tres" id="10_reio3"]
 [ext_resource type="Texture2D" uid="uid://bh4pijiat3kjs" path="res://paviment/PavingStones138_2K-PNG_NormalGL.png" id="12_3i3gk"]
@@ -23,40 +23,13 @@
 [ext_resource type="Script" path="res://point.gd" id="17_i1ly0"]
 [ext_resource type="PackedScene" uid="uid://bcsm3q7pr0603" path="res://juan_mecanico.tscn" id="22_xh4cl"]
 [ext_resource type="Script" uid="uid://bg21xbwxsvjok" path="res://Player.gd" id="23_3w8fs"]
+[ext_resource type="PackedScene" uid="uid://cb8jojittj411" path="res://Tiles/montañas_ilusion.tscn" id="24_dp7os"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5jcn1"]
 points = PackedVector3Array(2.142939, 0.817904, -0.18033469, 2.4907212, 0.817904, 0.7478335, 2.7777913, 3.8496222, -0.25853574, 2.9661732, 3.8084178, -0.8913891, 2.4907212, 0.817904, -1.108503, 3.4188895, 0.817904, 1.0961151, 3.6162658, 3.8821216, 0.5759413, 3.0176408, 3.8333726, 0.35682857, 3.3649232, 5.6457877, 0.060764194, 3.3162036, 5.9812264, -0.33373857, 3.310707, 5.621413, -0.72074604, 3.6784768, 5.993414, -0.8284285, 3.5622995, 3.8612292, -1.1624691, 3.4188895, 0.817904, -1.456285, 4.3470573, 0.817904, 0.7478335, 4.057489, 5.675966, 0.019040346, 3.7381892, 6.017208, 0.08374977, 4.1954026, 3.8548453, 0.33209407, 3.749682, 6.746701, -0.39969718, 4.0212617, 5.664939, -0.79594886, 4.1701684, 3.8496222, -0.96559256, 4.3470573, 0.817904, -1.108503, 4.695339, 0.817904, -0.18033469, 4.400774, 3.8931482, -0.3279922, 4.100462, 6.029395, -0.41094017)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5jcn1"]
 size = Vector3(3.1955414, 3.600357, 4.373596)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5jcn1"]
-shader = ExtResource("9_4n084")
-shader_parameter/Exponer = 1.70000002533204
-shader_parameter/TonoMapa = 0.766000036385
-shader_parameter/NivelContraste = 0.0
-shader_parameter/ColorFondo = Vector4(0.3, 0.3, 0.3, 0)
-shader_parameter/_OscuridadAtmosfera = 0.936
-shader_parameter/_ItensidadSol = 30.0
-shader_parameter/_EspesorAtmosfera = 1.0
-shader_parameter/_ColorDiaAtmosfera = Vector4(1, 1, 1, 1)
-shader_parameter/_ColorNocheAtmosfera = Vector4(0.02, 0.03, 0.04, 1)
-shader_parameter/_ColorHorizonte = Vector4(0.980392, 0.635294, 0.462745, 1)
-shader_parameter/_AtmosferaParametros = Vector3(1, 0, 0)
-shader_parameter/_SolTamanio = 0.01
-shader_parameter/_SolIntensidad = 1.90000002831228
-shader_parameter/_SolBrillo = 0.99999988079071
-shader_parameter/_SolColor = Vector4(1, 1, 1, 1)
-shader_parameter/sol_color_disco = Vector4(0.99, 0.49, 0.22, 1)
-shader_parameter/sol_intensidad_disco = 1.3
-shader_parameter/sol_tamanio_disco = 0.009
-
-[sub_resource type="Sky" id="Sky_reio3"]
-sky_material = SubResource("ShaderMaterial_5jcn1")
-
-[sub_resource type="Environment" id="Environment_23qqr"]
-background_mode = 2
-sky = SubResource("Sky_reio3")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4tq76"]
 
@@ -2039,11 +2012,7 @@ material_override = ExtResource("7_lac0w")
 mesh = ExtResource("7_4n084")
 skeleton = NodePath("../../..")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_23qqr")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 0.31571525, 0.94885397, 0, -0.94885397, 0.31571525, 0, 25.83574, 0)
+[node name="WorldEnvironment" parent="." instance=ExtResource("6_7ydog")]
 
 [node name="Escena" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
@@ -2377,6 +2346,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2565308, 0)
 [node name="Camera3D" type="Camera3D" parent="juanMecanico/Node3D"]
 transform = Transform3D(-0.9959553, -0.00858212, 0.089439556, -4.1751225e-09, 0.9954279, 0.09551567, -0.08985036, 0.095129326, -0.99140173, 0.913208, 0.3110218, -7.002434)
 current = true
+
+[node name="montañasIlusion" parent="." instance=ExtResource("24_dp7os")]
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
