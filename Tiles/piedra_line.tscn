@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxfgtx5nyx57p"]
+
+[ext_resource type="ArrayMesh" uid="uid://ct0k8mibb6yq5" path="res://Tiles/Mesh/piedraLine.tres" id="1_33hkg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kvcqd"]
+size = Vector3(12, 1, 6)
+
+[node name="piedraLine" type="MeshInstance3D"]
+mesh = ExtResource("1_33hkg")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_kvcqd")

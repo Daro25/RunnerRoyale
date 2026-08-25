@@ -6,8 +6,13 @@ var JUMP_VELOCITY = 4.5
 var angulo := 0.0
 var isJump := false
 var timerJump := 0.0
+var stop := false
+var inCar := true
 @onready var animPlayer = $AnimationPlayer
 func _physics_process(delta: float) -> void:
+	if inCar :
+		visible = false
+		return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -22,7 +27,7 @@ func _physics_process(delta: float) -> void:
 				sign(-direction.x)*5
 			)
 			$Armature.rotation.y = angulo
-			$Node3D.rotation.y = angulo
+			$camaraPoss.rotation.y = angulo
 		var Componentes : Vector2 = _polar_to_rect(angulo)
 		velocity.x = -direction.z * SPEED * Componentes.y
 		velocity.z = -direction.z * SPEED * Componentes.x
@@ -68,3 +73,10 @@ func _polar_to_rect(angle:float) ->Vector2:
 	var x = cos(angle)
 	var y = sin(angle)
 	return Vector2(x,y)
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.is_in_group('movil'): 
+		inCar = true
+		
+	pass # Replace with function body.

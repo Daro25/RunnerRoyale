@@ -2,8 +2,8 @@
 
 [ext_resource type="ArrayMesh" uid="uid://cfvlmeiff8615" path="res://Tiles/Mesh/cubePiedra.tres" id="2_s30w2"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_41i2e"]
-points = PackedVector3Array(-0.9499999, -0.95, -0.95, 0.9499999, 0.95, 0.95, 0.9499999, 0.95, -0.95, -0.9499999, 0.95, 0.95, 0.9499999, -0.95, 0.95, -0.9499999, 0.95, -0.95, 0.9499999, -0.95, -0.95, -0.9499999, -0.95, 0.95)
+[sub_resource type="BoxShape3D" id="BoxShape3D_oxmtf"]
+size = Vector3(2, 2, 2)
 
 [node name="cubePiedra" type="MeshInstance3D"]
 mesh = ExtResource("2_s30w2")
@@ -12,4 +12,4 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_41i2e")
+shape = SubResource("BoxShape3D_oxmtf")

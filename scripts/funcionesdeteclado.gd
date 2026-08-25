@@ -4,6 +4,7 @@ var current_health: float
 @export var health_bar: ProgressBar
 #Barra de vida
 signal died
+var stop := false
 func _ready():
 	current_health = max_health
 	if health_bar:
@@ -11,6 +12,7 @@ func _ready():
 		health_bar.value = current_health
 
 func _physics_process(delta: float) -> void:
+	if stop : return
 	if Input.is_action_pressed("ui_left"):
 		$llantaDI.steering = deg_to_rad(30)
 		$llantaDD.steering = deg_to_rad(30)
@@ -37,6 +39,7 @@ func _physics_process(delta: float) -> void:
 		$llantaDI.engine_force = 0
 func _input (event):
 	#remolcado
+	if stop : return
 	if event.is_action_pressed("Remolcar"):
 		apply_torque_impulse(Vector3(10000,0,0))
 		

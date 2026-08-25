@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://2bqktw84l0kx"]
+
+[ext_resource type="ArrayMesh" uid="uid://b350jru7pkaad" path="res://Tiles/Mesh/decoration.tres" id="1_capiy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k7ux6"]
+size = Vector3(1, 3, 1)
+
+[node name="decoracion" type="MeshInstance3D"]
+mesh = ExtResource("1_capiy")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_k7ux6")

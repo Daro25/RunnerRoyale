@@ -1,10 +1,10 @@
-[gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://cfvlmeiff8615"]
+[gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://ct0k8mibb6yq5"]
 
-[ext_resource type="Material" uid="uid://dghtn4awguuum" path="res://Tiles/materiales/piedras.tres" id="2_p4qam"]
+[ext_resource type="Material" uid="uid://dghtn4awguuum" path="res://Tiles/materiales/piedras.tres" id="1_cioba"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wvc4n"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_kpj8i"]
 _surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"aabb": AABB(-6, -0.5, -3, 12, 1, 6),
 "format": 34896613377,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
@@ -17,19 +17,19 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [resource]
-resource_name = "cityTiles2_Cube_001"
+resource_name = "cityTiles2_Cube_004"
 _surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2),
-"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
+"aabb": AABB(-6, -0.5, -3, 12, 1, 6),
+"attribute_data": PackedByteArray("OXn//+qapsrqmv//OXmmyjl5psrqmk6V6pqmyjl5TpU5eU6V6pr2X+qaTpU5efZfOXn2X+qanirqmvZfOXmeKtY1TpU5efZfOXlOldY19l+cvE6V///2X///TpWcvPZf"),
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": ExtResource("2_p4qam"),
+"material": ExtResource("1_cioba"),
 "name": "piedras",
 "primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
+"uv_scale": Vector4(4.755041, 6.0067215, 0, 0),
 "vertex_count": 24,
 "vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_wvc4n")
+shadow_mesh = SubResource("ArrayMesh_kpj8i")
